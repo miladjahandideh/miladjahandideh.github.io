@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-22S93JKNHS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-22S93JKNHS');
+    </script>
+    <title>Milad Jahandideh - Site Reliability Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #333;
+            --container-bg: #fff;
+        }
+
+        /* General dark mode styles */
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --container-bg: #1e1e1e;
+        }
+
+        /* Apply dark mode styles to elements */
+        .dark-mode body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .dark-mode .container {
+            background-color: var(--container-bg);
+        }
+
+        .dark-mode h1 {
+            color: #f8f8f8; /* Lighter text for h1 */
+        }
+
+        .dark-mode p {
+            color: #f5f5f5; /* Lighter text for paragraphs */
+        }
+
+        .dark-mode .profile-image {
+            border-color: #00ff00; /* Lighter border in dark mode */
+        }
+
+        .dark-mode .social-icons a {
+            background-color: #0f172a; /* Dark background for icons */
+            color: #fff;
+            border-color: #00ff00; /* Lighter border color */
+        }
+
+        .dark-mode .social-icons a:hover {
+            background-color: #00ff00;
+            color: #000;
+            border-color: #000;
+        }
+
+        .dark-mode .dark-mode-toggle {
+            background-color: #00ff00;
+            color: #000;
+            border-color: #00ff00;
+        }
+
+        .dark-mode .dark-mode-toggle:hover {
+            background-color: #00ff00;
+            color: #000;
+            border-color: #00ff00;
+        }
+
+        body {
+            font-family: 'Fira Mono', monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #00ff00;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            border: 1px solid #00ff00;
+            font-size: 1.2em;
+        }
+
+        .social-icons a:hover {
+            background-color: #00ff00;
+            transform: scale(1.1);
+            border-color: #00ff00;
+            color: #fff;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            font-family: 'Fira Mono', monospace;
+            color: #000;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #00ff00;
+            border-color: #00ff00;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+            transition: color 0.3s ease;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #444;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .social-icons a {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
+            .dark-mode-toggle{
+               font-size: 0.8rem;
+               padding: 8px 12px;
+            }
+            h1{
+                font-size: 1.8em;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+        .linux-button {
+            display: inline-block;
+            font-family: 'Fira Mono', monospace;
+            font-size: 1em;
+            padding: 10px 20px;
+            color: #00ff00;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .linux-button:hover {
+            background-color: #00ff00;
+            color: #000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <img src="./assets/profile-image.jpeg" alt="Milad Jahandideh" class="profile-image" loading="lazy">
+        <h1>Milad Jahandideh</h1>
+        <p>Site Reliability Engineer | Tech Lead</p>
+        <div class="social-icons">
+            <a href="https://github.com/miladjahandideh" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/10885754/milad-jahandideh" target="_blank" aria-label="Stack Overflow">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+        </div>
+        <p>I am currently serving as the Tech Lea
+            d at ArvanCloud.ir, providing Infrastructure as a Service (IaaS) solutions using OpenStack, Ceph, and Kubernetes. I oversee the reliability and performance of critical systems.</p>
+        <p>My inbox (milad.jahandideh.u@gmail.com) is always open. Feel free to reach out with any questions or opportunities, and I’ll get back to you as soon as I can!</p>
+        <div style="margin-top: 30px;">
+            <a href="src/cv.html" class="linux-button" target="_blank">
+                <i class="fas fa-terminal" style="margin-right: 8px;"></i> Launch Full CV
+            </a>
+        </div>
+    </div>
+    <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    <script>
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        const darkModeIcon = document.createElement('i');
+        darkModeIcon.classList.add('fas', 'fa-moon');
+        darkModeToggle.innerHTML = '';
+        darkModeToggle.appendChild(darkModeIcon);
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeIcon.classList.toggle('fa-moon');
+            darkModeIcon.classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+</html>

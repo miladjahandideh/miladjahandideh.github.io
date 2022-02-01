@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Milad Jahandideh - Site Reliability Engineer | Tech Lead</title>
+    <meta name="description" content="Milad Jahandideh is a Site Reliability Engineer and Tech Lead, specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+    
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Milad Jahandideh - Site Reliability Engineer">
+    <meta property="og:description" content="Site Reliability Engineer and Tech Lead specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milad-jahandideh.com/">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22S93JKNHS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-22S93JKNHS');
+  </script>
+
+    <style>
+        /* CSS Variables for Terminal Theme */
+        :root {
+            --terminal-bg: hsl(0, 0%, 5%);
+            --terminal-green: hsl(120, 100%, 50%);
+            --terminal-white: hsl(0, 0%, 100%);
+            --terminal-yellow: hsl(60, 100%, 50%);
+            --terminal-gray: hsl(0, 0%, 50%);
+            --terminal-blue: hsl(210, 100%, 60%);
+            --terminal-red: hsl(0, 100%, 50%);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--terminal-bg);
+            color: var(--terminal-green);
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        /* Terminal Window Styles */
+        .terminal-window {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .terminal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--terminal-bg);
+            border: 2px solid var(--terminal-gray);
+            border-radius: 8px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Terminal Header */
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(128, 128, 128, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-button.red { background-color: var(--terminal-red); }
+        .terminal-button.yellow { background-color: var(--terminal-yellow); }
+        .terminal-button.green { background-color: var(--terminal-green); }
+
+        .terminal-title {
+            color: var(--terminal-white);
+            font-size: 0.875rem;
+        }
+
+        /* Terminal Content */
+        .terminal-content {
+            padding: 1.5rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .command-line {
+            color: var(--terminal-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt {
+            color: var(--terminal-green);
+        }
+
+        .path {
+            color: var(--terminal-blue);
+        }
+
+        .output {
+            margin-left: 1rem;
+        }
+
+        /* Typography */
+        .name-header {
+            color: var(--terminal-yellow);
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--terminal-white);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--terminal-yellow);
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            border-left: 2px solid var(--terminal-green);
+            padding-left: 1rem;
+        }
+
+        .text-content {
+            color: var(--terminal-white);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .text-gray {
+            color: var(--terminal-gray);
+        }
+
+        .text-blue {
+            color: var(--terminal-blue);
+        }
+
+        /* ASCII Art */
+        .ascii-art {
+            color: var(--terminal-gray);
+            font-size: 0.75rem;
+            white-space: pre;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        /* Navigation */
+        .file-listing {
+            margin-left: 1rem;
+        }
+
+        .file-item {
+            cursor: pointer;
+            transition: color 0.3s ease;
+            margin-bottom: 0.25rem;
+        }
+
+        .file-item:hover {
+            color: var(--terminal-yellow);
+        }
+
+        .directory {
+            color: var(--terminal-blue);
+        }
+
+        /* Code Block */
+        .code-block {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--terminal-gray);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: var(--terminal-white);
+            font-size: 0.875rem;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            border-left: 2px solid var(--terminal-green);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            color: var(--terminal-yellow);
+            font-weight: bold;
+        }
+
+        .company {
+            color: var(--terminal-white);
+        }
+
+        .job-details {
+            color: var(--terminal-gray);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Education Items */
+        .education-item {
+            border-left: 2px solid var(--terminal-blue);
+            padding-left: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .degree {
+            color: var(--terminal-white);
+            font-weight: bold;
+        }
+
+        .institution {
+            color: var(--terminal-gray);
+        }
+
+        .education-details {
+            color: var(--terminal-blue);
+            font-size: 0.75rem;
+        }
+
+        /* Contact Links */
+        .contact-box {
+            border: 1px solid var(--terminal-green);
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--terminal-blue);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--terminal-yellow);
+        }
+
+        .arrow {
+            color: var(--terminal-green);
+        }
+
+        /* Certifications Grid */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--terminal-gray);
+        }
+
+        /* Blinking Cursor */
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .terminal-window {
+                padding: 0.5rem;
+            }
+
+            .terminal-content {
+                padding: 1rem;
+            }
+
+            .name-header {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .ascii-art {
+                font-size: 0.5rem;
+            }
+
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hidden sections for navigation */
+        .content-section {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-container">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="terminal-button red"></div>
+                    <div class="terminal-button yellow"></div>
+                    <div class="terminal-button green"></div>
+                </div>
+                <div class="terminal-title">milad@jahandideh:~$</div>
+                <div style="width: 64px;"></div>
+            </div>
+
+            <!-- Terminal Content -->
+            <div class="terminal-content">
+                <!-- Initial whoami command -->
+                <div class="section">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ whoami
+                    </div>
+                    <div class="output">
+                        <div class="name-header" id="name-header">MILAD JAHANDIDEH</div>
+                        <div class="subtitle" id="subtitle" style="display: none;">Site Reliability Engineer | Tech Lead</div>
+                    </div>
+                </div>
+
+
+                <!-- Navigation Menu -->
+                <div class="section">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ ls -la
+                    </div>
+                    <div class="file-listing">
+                        <div class="file-item" onclick="scrollToSection('about')">
+                            drwxr-xr-x  1 milad  jahandideh   256 Jan 17 2025 <span class="directory">about/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('skills')">
+                            drwxr-xr-x  1 milad  jahandideh   512 Jan 17 2025 <span class="directory">skills/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('experience')">
+                            drwxr-xr-x  1 milad  jahandideh   1024 Jan 17 2025 <span class="directory">experience/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('education')">
+                            drwxr-xr-x  1 milad  jahandideh   512 Jan 17 2025 <span class="directory">education/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('contact')">
+                            -rw-r--r--  1 milad  jahandideh   128 Jan 17 2025 contact.txt
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="section content-section" id="about">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ cat about/profile.md
+                    </div>
+                    <div class="output">
+                        <div class="section-title"># PROFESSIONAL OVERVIEW</div>
+                        <div class="text-content">
+                            I'm a Site Reliability Engineer (SRE) and Tech Lead with over 5 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.
+
+                            At ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section content-section" id="skills">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ cat skills/stack.json
+                    </div>
+                    <div class="output">
+                        <div class="code-block">
+                            <pre>{
+  "cloud_platforms": {
+    "public": ["Amazon AWS"],
+    "private": ["OpenStack", "VMware ESXi"],
+    "virtualization": ["KVM", "QEMU"]
+  },
+  "orchestration": {
+    "containers": ["Kubernetes", "Docker", "Helm"],
+    "storage": ["Ceph"],
+    "infrastructure": ["Terraform", "Ansible"]
+  },
+  "languages": {
+    "primary": ["Python", "Golang"],
+    "scripting": ["Bash"]
+  },
+  "ci_cd": {
+    "platforms": ["GitLab CI", "GitHub Actions", "ArgoCD"],
+    "repositories": ["GitLab"]
+  },
+  "databases": {
+    "relational": ["MariaDB"],
+    "caching": ["Redis"],
+    "search": ["OpenSearch"]
+  },
+  "monitoring": {
+    "metrics": ["Prometheus", "Grafana", "Zabbix"],
+    "tracing": ["Jaeger"]
+  },
+  "systems": {
+    "os": ["Linux", "Windows"],
+    "automation": ["Ansible"],
+    "messaging": ["RabbitMQ"],
+    "Networking": ["OVN", "Open vSwitch"]
+  }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="section content-section" id="experience">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ tail -f experience/career.log
+                    </div>
+                    <div class="output">
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [NOV 2020 - PRESENT] <span class="company">Site Reliability Engineer / Tech Lead @ ArvanCloud.ir</span>
+                            </div>
+                            <div class="job-details">
+                                In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes.
+
+                                    • Participate in project planning, task estimation, and prioritization to maintain alignment with organizational goals<br>
+                                    • Collaborate with cross-functional teams to design and implement scalable, resilient infrastructure solutions<br>
+                                    • Improve system reliability by building robust monitoring and alerting stacks using Prometheus, Grafana, and custom alerting rules<br>
+                                    • Promote SRE best practices, driving a culture of reliability, automation, and continuous improvement<br>
+                                    • Design and maintain CI/CD pipelines using GitLab CI, improving deployment speed and consistency<br>
+                                    • Contribute to Infrastructure-as-Code initiatives using Ansible, enabling repeatable and automated deployments<br>
+                                    • Implement Load Balancer as a Service (LBaaS) using the OpenStack Octavia project<br>
+                                    • Deploy, operate, and optimize multiple Kubernetes clusters<br>
+                                    • Manage dozens of microservices on Kubernetes using Helm charts, ensuring efficient rollouts and lifecycle management<br>
+                                    • Led a VPC project connecting three OpenStack clusters using VXLAN overlays and BGP EVPN routing, leveraging OVN and Open vSwitch to deliver unified networking and secure inter-cluster communication.<br>
+
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [DEC 2018 - NOV 2020] <span class="company">Linux System Administrator @ Mahsan.co</span>
+                            </div>
+                            <div class="job-details">
+                                • Implemented VMware ESXi virtualization infrastructure to facilitate code development and testing for developers<br>
+                                • Managed deployment and maintenance of applications on a large-scale Linux server environment<br>
+                                • Automated repetitive tasks using Ansible and Shell Scripting<br>
+                                • Containerized monolithic applications and optimized them to run on LXC<br>
+                                • Implemented ELK Stack to collect and analyze logs from thousands of servers centrally<br>
+                                • Utilized Zabbix for server monitoring<br>
+                                • Implemented UI testing automation using Selenium<br>
+                                • Provided Linux-related technical support and assistance to developers<br>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [DEC 2017 - NOV 2018] <span class="company">Embedded Systems Developer @ Adeeco</span>
+                            </div>
+                            <div class="job-details">
+                                • Worked on embedded systems for industrial applications.<br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="section content-section" id="education">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ cat education/credentials.yaml
+                    </div>
+                    <div class="output">
+                        <div class="code-block">
+                            <div class="section-title">EDUCATION</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <div class="education-item">
+                                    <div class="degree">MS Technology and Innovation Management</div>
+                                    <div class="institution">Iran University of Science and Technology (2020-2022)</div>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <div class="degree">BS Information and Communications Technology</div>
+                                    <div class="institution">Shamsipour Technical and Vocational College (2013-2015)</div>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <div class="degree">AS Electronic Engineering</div>
+                                    <div class="institution">Technical and Vocational University (2011-2013)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="section content-section" id="contact">
+                    <div class="command-line">
+                        <span class="prompt">milad@jahandideh</span>:<span class="path">~</span>$ cat contact.txt
+                    </div>
+                    <div class="output">
+                        <div class="contact-box">
+                            <div class="section-title">CONNECT WITH ME</div>
+                            <div class="contact-item">
+                                <span class="arrow">→</span>
+                                <span>Website:</span>
+                                <a href="https://milad-jahandideh.com/" target="_blank" rel="noopener noreferrer">
+                                    milad-jahandideh.com
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="arrow">→</span>
+                                <span>Email:</span>
+                                <a href="mailto:milad.jahandideh.u@gmail.com">
+                                    milad.jahandideh.u@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Terminal Prompt with Cursor -->
+                <div class="section">
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="prompt">milad@jahandideh</span>
+                        <span class="path">:~$</span>
+                        <span class="cursor">█</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        window.addEventListener('load', () => {
+            const nameHeader = document.getElementById('name-header');
+            const subtitle = document.getElementById('subtitle');
+            nameHeader.innerText = 'MILAD JAHANDIDEH';
+            subtitle.innerText = 'Site Reliability Engineer | Tech Lead';
+            subtitle.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
