@@ -185,6 +185,40 @@
             outline: none;
         }
 
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cv-button {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-button:hover {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .cv-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
         /* Technologies Section */
         .technologies {
             margin-top: 40px;
@@ -284,7 +318,10 @@
         <p>My LinkedIn inbox is always open. Feel free to reach out with any questions or opportunities, and I’ll get back to you as soon as I can!</p>
         
         <!-- Technologies Section -->
-        <button class="toggle-tech-btn">My Tech Stack</button>
+        <div class="button-group">
+            <button class="toggle-tech-btn">Technical Skills</button>
+            <a href="v2/index.html" class="cv-button">Full Résumé</a>
+        </div>
         <div class="technologies" id="technologies-section">
             <h2>Technologies I've Worked With</h2>
             <div class="terminal" id="terminal-output">
@@ -368,7 +405,7 @@
                 text = ''; // Reset if the section is hidden and then shown again
                 document.getElementById('terminal-text').textContent = '';
             }
-            toggleTechBtn.textContent = techSection.classList.contains('show') ? 'Hide Tech Stack' : 'My Tech Stack';
+            toggleTechBtn.textContent = techSection.classList.contains('show') ? 'Hide Technical Skills' : 'Technical Skills';
         });
     </script>
 </body>
