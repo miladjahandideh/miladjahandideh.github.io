@@ -50,31 +50,31 @@
         }
 
         .dark-mode .profile-image {
-            border-color: #6ee7b7; /* Lighter border in dark mode */
+            border-color: #00ff00; /* Lighter border in dark mode */
         }
 
         .dark-mode .social-icons a {
             background-color: #0f172a; /* Dark background for icons */
             color: #fff;
-            border-color: #6ee7b7; /* Lighter border color */
+            border-color: #00ff00; /* Lighter border color */
         }
 
         .dark-mode .social-icons a:hover {
-            background-color: #6ee7b7;
+            background-color: #00ff00;
             color: #000;
-            border-color: #3b82f6;
+            border-color: #000;
         }
 
         .dark-mode .dark-mode-toggle {
-            background-color: #3b82f6;
+            background-color: #00ff00;
             color: #000;
-            border-color: #6ee7b7;
+            border-color: #00ff00;
         }
 
         .dark-mode .dark-mode-toggle:hover {
-            background-color: #6ee7b7;
+            background-color: #00ff00;
             color: #000;
-            border-color: #3b82f6;
+            border-color: #00ff00;
         }
 
         body {
@@ -106,7 +106,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-            border: 2px solid #4CAF50;
+            border: 2px solid #00ff00;
         }
 
         .social-icons {
@@ -125,14 +125,14 @@
             color: #333;
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-            border: 1px solid #4CAF50;
+            border: 1px solid #00ff00;
             font-size: 1.2em;
         }
 
         .social-icons a:hover {
-            background-color: #4CAF50;
+            background-color: #00ff00;
             transform: scale(1.1);
-            border-color: #66BB6A;
+            border-color: #00ff00;
             color: #fff;
         }
 
@@ -140,19 +140,19 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #4CAF50;
-            border: 2px solid #66BB6A;
+            background-color: #00ff00;
+            border: 2px solid #00ff00;
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
             font-family: 'Fira Mono', monospace;
-            color: #fff;
+            color: #000;
         }
 
         .dark-mode-toggle:hover {
-            background-color: #66BB6A;
-            border-color: #4CAF50;
+            background-color: #00ff00;
+            border-color: #00ff00;
         }
 
         h1 {
@@ -168,112 +168,6 @@
             line-height: 1.6;
             color: #444;
             transition: color 0.3s ease;
-        }
-
-        /* Modern Style for "Show Technologies" Button */
-        .toggle-tech-btn {
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #4CAF50, #66BB6A);
-            color: white;
-            font-size: 1.1em;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .toggle-tech-btn:hover {
-            background: linear-gradient(135deg, #66BB6A, #4CAF50);
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .toggle-tech-btn:focus {
-            outline: none;
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .cv-button {
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #3B82F6, #60A5FA);
-            color: white;
-            font-size: 1.1em;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cv-button:hover {
-            background: linear-gradient(135deg, #60A5FA, #3B82F6);
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 600px) {
-            .cv-button {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-        }
-
-        /* Technologies Section */
-        .technologies {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .technologies h2 {
-            font-size: 1.8em;
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 20px;
-        }
-
-        .terminal {
-            background-color: #000;
-            color: #00FF00;
-            font-family: 'Courier New', Courier, monospace;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            white-space: pre-wrap; /* Allow wrapping of long lines */
-            word-wrap: break-word;
-            font-size: 1.2em;
-            height: 300px;
-            overflow-y: auto;
-            max-width: 100%;
-            text-align: left; /* Left-align the text */
-        }
-
-        #terminal-text {
-            margin: 0;
-            line-height: 1.6;
-            white-space: pre-wrap;
-        }
-
-        /* Initial hidden state for the technologies section */
-        #technologies-section {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        #technologies-section.show {
-            display: block;
-            opacity: 1;
         }
 
         @media (max-width: 600px) {
@@ -302,13 +196,31 @@
                 font-size: 1rem;
             }
         }
+        .linux-button {
+            display: inline-block;
+            font-family: 'Fira Mono', monospace;
+            font-size: 1em;
+            padding: 10px 20px;
+            color: #00ff00;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .linux-button:hover {
+            background-color: #00ff00;
+            color: #000;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="dark-mode">
     <div class="container">
         <img src="./assets/profile-image.jpeg" alt="Milad Jahandideh" class="profile-image" loading="lazy">
         <h1>Milad Jahandideh</h1>
-        <p>Site Reliability Engineer</p>
+        <p>Site Reliability Engineer | SRE Team Lead</p>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/miladjahandideh/" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
@@ -316,26 +228,16 @@
             <a href="https://github.com/miladjahandideh" target="_blank" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://melec.ir/category/microcontrollers/avr/avr-projects/" target="_blank" aria-label="Website" title="My old Blog related to Embedded Systems and Programming">
-                <i class="fas fa-globe"></i>
-            </a>
             <a href="https://stackoverflow.com/users/10885754/milad-jahandideh" target="_blank" aria-label="Stack Overflow">
                 <i class="fab fa-stack-overflow"></i>
             </a>
         </div>
-        <p>I’m a Site Reliability Engineer specializing in optimizing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes. Feel free to connect via LinkedIn for more details!</p>
+        <p>I am currently serving as the SRE Team Lead at ArvanCloud.ir, providing Infrastructure as a Service (IaaS) solutions using OpenStack, Ceph, and Kubernetes. I oversee the reliability and performance of critical systems while mentoring junior engineers.</p>
         <p>My LinkedIn inbox is always open. Feel free to reach out with any questions or opportunities, and I’ll get back to you as soon as I can!</p>
-        
-        <!-- Technologies Section -->
-        <div class="button-group">
-            <button class="toggle-tech-btn">Technical Skills</button>
-            <a href="v2" class="cv-button">Full Résumé</a>
-        </div>
-        <div class="technologies" id="technologies-section">
-            <h2>Technologies I've Worked With</h2>
-            <div class="terminal" id="terminal-output">
-                <pre id="terminal-text"></pre>
-            </div>
+        <div style="margin-top: 30px;">
+            <a href="v3/index.html" class="linux-button" target="_blank">
+                <i class="fas fa-terminal" style="margin-right: 8px;"></i> Launch Full CV
+            </a>
         </div>
     </div>
     <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
@@ -350,71 +252,6 @@
             document.body.classList.toggle('dark-mode');
             darkModeIcon.classList.toggle('fa-moon');
             darkModeIcon.classList.toggle('fa-sun');
-        });
-
-        const techList = [
-            "MariaDB",
-            "Prometheus",
-            "Linux",
-            "OpenStack",
-            "Gitlab",
-            "RabbitMQ",
-            "Terraform",
-            "Grafana",
-            "Ansible",
-            "Redis",
-            "HP Servers",
-            "QEMU/KVM",
-            "Docker",
-            "Amazon AWS",
-            "Git",
-            "Golang",
-            "Google Cloud",
-            "REST APIs",
-            "ElasticSearch",
-            "OpenSearch",
-            "Python",
-            "OVN/OVS",
-            "Jaeger",
-            "ArgoCD",
-            "Helm"
-        ];
-
-        techList.sort((a, b) => a.length - b.length); // Sort by length of word
-
-        let i = 0;
-        let text = '';
-
-        // Function to simulate "cat tech-stack.txt" command output
-        function typeTechnology() {
-            if (i === 0) {
-            text = 'root@milad:~# cat tech-stack.txt\n'; // Change prompt to 'root@milad:~#'
-            }
-
-            if (i < techList.length) {
-                text += `${techList[i]}\n`;  // List each technology name like a 'cat' output
-                document.getElementById('terminal-text').textContent = text;
-                i++;
-                setTimeout(typeTechnology, 500); // Adjust typing speed here
-            }
-        }
-
-        const toggleTechBtn = document.querySelector('.toggle-tech-btn');
-        const techSection = document.getElementById('technologies-section');
-
-        toggleTechBtn.addEventListener('click', () => {
-            techSection.classList.toggle('show');
-            if (techSection.classList.contains('show') && i === 0) {
-                typeTechnology(); // Start typing when the section is shown
-                setTimeout(() => {
-                    techSection.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the terminal
-                }, 500); // Delay to allow section to be visible first
-            } else {
-                i = 0;
-                text = ''; // Reset if the section is hidden and then shown again
-                document.getElementById('terminal-text').textContent = '';
-            }
-            toggleTechBtn.textContent = techSection.classList.contains('show') ? 'Hide Technical Skills' : 'Technical Skills';
         });
     </script>
 </body>
