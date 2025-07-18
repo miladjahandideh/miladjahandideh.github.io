@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Milad Jahandideh - Site Reliability Engineer | SRE Team Lead</title>
+    <meta name="description" content="Milad Jahandideh is a Site Reliability Engineer and Team Lead at ArvanCloud.ir, specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+    
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Milad Jahandideh - Site Reliability Engineer">
+    <meta property="og:description" content="Site Reliability Engineer and Team Lead specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milad.melec.ir/">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22S93JKNHS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-22S93JKNHS');
+  </script>
+
+    <style>
+        /* CSS Variables for Terminal Theme */
+        :root {
+            --terminal-bg: hsl(0, 0%, 5%);
+            --terminal-green: hsl(120, 100%, 50%);
+            --terminal-white: hsl(0, 0%, 100%);
+            --terminal-yellow: hsl(60, 100%, 50%);
+            --terminal-gray: hsl(0, 0%, 50%);
+            --terminal-blue: hsl(210, 100%, 60%);
+            --terminal-red: hsl(0, 100%, 50%);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--terminal-bg);
+            color: var(--terminal-green);
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        /* Terminal Window Styles */
+        .terminal-window {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .terminal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--terminal-bg);
+            border: 2px solid var(--terminal-gray);
+            border-radius: 8px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Terminal Header */
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(128, 128, 128, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-button.red { background-color: var(--terminal-red); }
+        .terminal-button.yellow { background-color: var(--terminal-yellow); }
+        .terminal-button.green { background-color: var(--terminal-green); }
+
+        .terminal-title {
+            color: var(--terminal-white);
+            font-size: 0.875rem;
+        }
+
+        /* Terminal Content */
+        .terminal-content {
+            padding: 1.5rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .command-line {
+            color: var(--terminal-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt {
+            color: var(--terminal-green);
+        }
+
+        .path {
+            color: var(--terminal-blue);
+        }
+
+        .output {
+            margin-left: 1rem;
+        }
+
+        /* Typography */
+        .name-header {
+            color: var(--terminal-yellow);
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--terminal-white);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--terminal-yellow);
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            border-left: 2px solid var(--terminal-green);
+            padding-left: 1rem;
+        }
+
+        .text-content {
+            color: var(--terminal-white);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .text-gray {
+            color: var(--terminal-gray);
+        }
+
+        .text-blue {
+            color: var(--terminal-blue);
+        }
+
+        /* ASCII Art */
+        .ascii-art {
+            color: var(--terminal-gray);
+            font-size: 0.75rem;
+            white-space: pre;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        /* Navigation */
+        .file-listing {
+            margin-left: 1rem;
+        }
+
+        .file-item {
+            cursor: pointer;
+            transition: color 0.3s ease;
+            margin-bottom: 0.25rem;
+        }
+
+        .file-item:hover {
+            color: var(--terminal-yellow);
+        }
+
+        .directory {
+            color: var(--terminal-blue);
+        }
+
+        /* Code Block */
+        .code-block {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--terminal-gray);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: var(--terminal-white);
+            font-size: 0.875rem;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            border-left: 2px solid var(--terminal-green);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            color: var(--terminal-yellow);
+            font-weight: bold;
+        }
+
+        .company {
+            color: var(--terminal-white);
+        }
+
+        .job-details {
+            color: var(--terminal-gray);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Education Items */
+        .education-item {
+            border-left: 2px solid var(--terminal-blue);
+            padding-left: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .degree {
+            color: var(--terminal-white);
+            font-weight: bold;
+        }
+
+        .institution {
+            color: var(--terminal-gray);
+        }
+
+        .education-details {
+            color: var(--terminal-blue);
+            font-size: 0.75rem;
+        }
+
+        /* Contact Links */
+        .contact-box {
+            border: 1px solid var(--terminal-green);
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--terminal-blue);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--terminal-yellow);
+        }
+
+        .arrow {
+            color: var(--terminal-green);
+        }
+
+        /* Certifications Grid */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--terminal-gray);
+        }
+
+        /* Blinking Cursor */
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .terminal-window {
+                padding: 0.5rem;
+            }
+
+            .terminal-content {
+                padding: 1rem;
+            }
+
+            .name-header {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .ascii-art {
+                font-size: 0.5rem;
+            }
+
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hidden sections for navigation */
+        .content-section {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-container">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="terminal-button red"></div>
+                    <div class="terminal-button yellow"></div>
+                    <div class="terminal-button green"></div>
+                </div>
+                <div class="terminal-title">milad@arvancloud:~$</div>
+                <div style="width: 64px;"></div>
+            </div>
+
+            <!-- Terminal Content -->
+            <div class="terminal-content">
+                <!-- Initial whoami command -->
+                <div class="section">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ whoami
+                    </div>
+                    <div class="output">
+                        <div class="name-header typewriter" id="name-header">MILAD JAHANDIDEH</div>
+                        <div class="subtitle" id="subtitle" style="display: none;">Site Reliability Engineer | SRE Team Lead at ArvanCloud.ir</div>
+                    </div>
+                </div>
+
+
+                <!-- Navigation Menu -->
+                <div class="section">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ ls -la
+                    </div>
+                    <div class="file-listing">
+                        <div class="file-item" onclick="scrollToSection('about')">
+                            drwxr-xr-x  1 milad  arvan   256 Jan 17 2025 <span class="directory">about/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('skills')">
+                            drwxr-xr-x  1 milad  arvan   512 Jan 17 2025 <span class="directory">skills/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('experience')">
+                            drwxr-xr-x  1 milad  arvan   1024 Jan 17 2025 <span class="directory">experience/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('education')">
+                            drwxr-xr-x  1 milad  arvan   512 Jan 17 2025 <span class="directory">education/</span>
+                        </div>
+                        <div class="file-item" onclick="scrollToSection('contact')">
+                            -rw-r--r--  1 milad  arvan   128 Jan 17 2025 contact.txt
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="section content-section" id="about">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ cat about/profile.md
+                    </div>
+                    <div class="output">
+                        <div class="section-title"># PROFESSIONAL OVERVIEW</div>
+                        <div class="text-content">
+                            I'm a Site Reliability Engineer with years of experience in building and maintaining scalable systems. I specialize in automating infrastructure, optimizing platform reliability, and leading DevOps/SRE initiatives. My passion lies in ensuring high availability and performance at scale, leveraging tools such as Kubernetes, OpenStack, and Ansible.
+
+                            As a team lead, I foster collaboration, knowledge-sharing, and continuous improvement. I'm constantly exploring new technologies and refining systems to be more efficient, resilient, and secure.
+                        </div>
+
+                        <div class="section-title"># CURRENT ROLE</div>
+                        <div class="text-content">
+                            Currently serving as SRE Team Lead at ArvanCloud.ir since March 2023, 
+                            providing Infrastructure as a Service (IaaS) solutions with OpenStack, 
+                            Ceph, and Kubernetes. I oversee the reliability and performance of 
+                            critical systems while mentoring junior engineers.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section content-section" id="skills">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ cat skills/stack.json
+                    </div>
+                    <div class="output">
+                        <div class="code-block">
+                            <pre>{
+  "cloud_platforms": {
+    "public": ["Amazon AWS"],
+    "private": ["OpenStack", "VMware ESXi"],
+    "virtualization": ["KVM", "QEMU"]
+  },
+  "orchestration": {
+    "containers": ["Kubernetes", "Docker", "Helm"],
+    "storage": ["Ceph"],
+    "infrastructure": ["Terraform", "Ansible"]
+  },
+  "languages": {
+    "primary": ["Python", "Golang"],
+    "scripting": ["Bash"]
+  },
+  "ci_cd": {
+    "platforms": ["GitLab CI", "GitHub Actions", "ArgoCD"],
+    "repositories": ["GitLab"]
+  },
+  "databases": {
+    "relational": ["MariaDB"],
+    "caching": ["Redis"],
+    "search": ["OpenSearch"]
+  },
+  "monitoring": {
+    "metrics": ["Prometheus", "Grafana", "Zabbix"],
+    "tracing": ["Jaeger"]
+  },
+  "systems": {
+    "os": ["Linux", "Windows"],
+    "automation": ["Ansible"],
+    "messaging": ["RabbitMQ"],
+    "Networking": ["OVN", "Open vSwitch"]
+  }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="section content-section" id="experience">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ tail -f experience/career.log
+                    </div>
+                    <div class="output">
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [NOV 2020 - PRESENT] <span class="company">Site Reliability Engineer / Team Lead @ ArvanCloud.ir</span>
+                            </div>
+                            <div class="job-details">
+                                In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes.
+
+                                    • Serving as the SRE Team Lead since March 2023. I oversee the reliability and performance of critical systems, contributing to the organization's overall success<br>
+                                    • Deployed and managed multiple Kubernetes, Ceph, and OpenStack clusters<br>
+                                    • Provided mentorship and guidance to junior engineers and new team members, contributing to their onboarding and professional development<br>
+                                    • Participated actively in planning and task calibration processes, ensuring alignment with project goals and timelines<br>
+                                    • Collaborated with cross-functional teams to design and implement scalable and reliable systems, prioritizing high availability and optimal performance<br>
+                                    • Enhanced system reliability through the implementation of efficient monitoring and alerting solutions, utilizing Prometheus and Grafana to identify and address potential issues swiftly<br>
+                                    • Promoted a culture of reliability and continuous improvement, advocating for best practices<br>
+                                    • Implemented CI/CD pipelines using Gitlab-CI<br>
+                                    • Contributed significantly to an Infrastructure as a Code project written in Ansible<br>
+                                    • Implemented Load Balancer as a Service (LBaaS) using the OpenStack Octavia Project<br>
+                                    • Effectively managed dozens of microservices on Kubernetes using Helm charts<br>
+                                    • Played an active role in the on-call schedule, ensuring a rapid response and resolution to critical incidents, contributing to the overall stability of the systems<br>
+
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [DEC 2022 - APR 2023] <span class="company">Site Reliability Engineer @ Reactivesearch.io</span>
+                            </div>
+                            <div class="job-details">
+                                • Collaborated on a Golang codebase integrated with Ansible to provision Elasticsearch and OpenSearch clusters on AWS and GCP cloud environments.
+Implemented CI/CD pipelines using GitHub Actions<br>
+                                • Implemented CI/CD pipelines using GitHub Actions
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [DEC 2018 - NOV 2020] <span class="company">Linux System Administrator @ Mahsan.co</span>
+                            </div>
+                            <div class="job-details">
+                                • Implemented VMware ESXi virtualization infrastructure to facilitate code development and testing for developers<br>
+                                • Managed deployment and maintenance of applications on a large-scale Linux server environment<br>
+                                • Automated repetitive tasks using Ansible and Shell Scripting<br>
+                                • Containerized monolithic applications and optimized them to run on LXC<br>
+                                • Implemented ELK Stack to centrally collect and analyze logs from thousands of servers<br>
+                                • Utilized Zabbix for server monitoring<br>
+                                • Implemented UI testing automation using Selenium<br>
+                                • Provided Linux-related technical support and assistance to developers<br>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [Dec 2017 - Nov 2018] <span class="company">Embedded Systems Developer @ Adeeco</span>
+                            </div>
+                            <div class="job-details">
+                                • Worked on embedded systems for industrial applications.<br>
+                            </div>
+                        </div>
+    
+                        <div class="experience-item">
+                            <div class="job-title">
+                                [NOV 2013 - DEC 2018] <span class="company">Webmaster & Founder @ Melec.ir</span>
+                            </div>
+                            <div class="job-details">
+                                • Founded Melec.ir in Nov 2013 to share content about Electronic Engineering and Microcontroller programming as a side project during university studies<br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="section content-section" id="education">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ cat education/credentials.yaml
+                    </div>
+                    <div class="output">
+                        <div class="code-block">
+                            <div class="section-title">EDUCATION</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <div class="education-item">
+                                    <div class="degree">MS Technology and Innovation Management</div>
+                                    <div class="institution">Iran University of Science and Technology (2020-2022)</div>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <div class="degree">BS Information and Communications Technology</div>
+                                    <div class="institution">Shamsipour Technical and Vocational College (2013-2015)</div>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <div class="degree">AS Electronic Engineering</div>
+                                    <div class="institution">Technical and Vocational University (2011-2013)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="section content-section" id="contact">
+                    <div class="command-line">
+                        <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ cat contact.txt
+                    </div>
+                    <div class="output">
+                        <div class="contact-box">
+                            <div class="section-title">CONNECT WITH ME</div>
+                            <div class="contact-item">
+                                <span class="arrow">→</span>
+                                <span>LinkedIn:</span>
+                                <a href="https://www.linkedin.com/in/miladjahandideh/" target="_blank" rel="noopener noreferrer">
+                                    /in/miladjahandideh
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="arrow">→</span>
+                                <span>Website:</span>
+                                <a href="https://milad.melec.ir/" target="_blank" rel="noopener noreferrer">
+                                    milad.melec.ir
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="arrow">→</span>
+                                <span>Email:</span>
+                                <a href="mailto:milad.jahandideh.u@gmail.com">
+                                    milad.jahandideh.u@gmail.com
+                                </a>
+                            </div>
+
+                        <div class="text-gray" style="font-size: 0.875rem; margin-top: 1rem;">
+                            Feel free to connect via LinkedIn for more details about my experience and projects!
+                        </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Terminal Prompt with Cursor -->
+                <div class="section">
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="prompt">milad@arvancloud</span>
+                        <span class="path">:~$</span>
+                        <span class="cursor">█</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Typewriter effect for the name header
+        function typewriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    // Show subtitle after name is complete
+                    setTimeout(() => {
+                        const subtitle = document.getElementById('subtitle');
+                        subtitle.style.display = 'block';
+                        typewriter(subtitle, 'Site Reliability Engineer | SRE Team Lead at ArvanCloud.ir', 30);
+                    }, 300);
+                }
+            }
+            
+            type();
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Initialize typewriter effect when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const nameHeader = document.getElementById('name-header');
+                typewriter(nameHeader, 'MILAD JAHANDIDEH', 100);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
