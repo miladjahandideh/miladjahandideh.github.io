@@ -293,12 +293,6 @@
             51%, 100% { opacity: 0; }
         }
 
-        /* Typewriter Effect */
-        .typewriter {
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -360,7 +354,7 @@
                         <span class="prompt">milad@arvancloud</span>:<span class="path">~</span>$ whoami
                     </div>
                     <div class="output">
-                        <div class="name-header typewriter" id="name-header">MILAD JAHANDIDEH</div>
+                        <div class="name-header" id="name-header">MILAD JAHANDIDEH</div>
                         <div class="subtitle" id="subtitle" style="display: none;">Site Reliability Engineer | SRE Team Lead at ArvanCloud.ir</div>
                     </div>
                 </div>
@@ -617,29 +611,6 @@ Implemented CI/CD pipelines using GitHub Actions<br>
     </div>
 
     <script>
-        // Typewriter effect for the name header
-        function typewriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    // Show subtitle after name is complete
-                    setTimeout(() => {
-                        const subtitle = document.getElementById('subtitle');
-                        subtitle.style.display = 'block';
-                        typewriter(subtitle, 'Site Reliability Engineer | SRE Team Lead at ArvanCloud.ir', 30);
-                    }, 300);
-                }
-            }
-            
-            type();
-        }
-
         // Smooth scroll to section
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
@@ -651,12 +622,12 @@ Implemented CI/CD pipelines using GitHub Actions<br>
             }
         }
 
-        // Initialize typewriter effect when page loads
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                const nameHeader = document.getElementById('name-header');
-                typewriter(nameHeader, 'MILAD JAHANDIDEH', 100);
-            }, 1000);
+            const nameHeader = document.getElementById('name-header');
+            const subtitle = document.getElementById('subtitle');
+            nameHeader.innerText = 'MILAD JAHANDIDEH';
+            subtitle.innerText = 'Site Reliability Engineer | SRE Team Lead at ArvanCloud.ir';
+            subtitle.style.display = 'block';
         });
     </script>
 </body>
