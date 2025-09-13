@@ -1,5 +1,5 @@
 ## Milad Jahandideh
-Site Reliability Engineer | SRE Team Lead
+Site Reliability Engineer | Technical Team Lead
 
 [LinkedIn](https://www.linkedin.com/in/miladjahandideh/)
 
@@ -11,17 +11,17 @@ Site Reliability Engineer | SRE Team Lead
 
 I'm a Site Reliability Engineer with several years of experience building and maintaining scalable systems. I specialize in automating infrastructure, optimizing platform reliability, and leading DevOps/SRE initiatives. My passion lies in ensuring high availability and performance at scale using tools like Kubernetes, OpenStack, and Ansible.
 
-As a team lead, I foster collaboration, knowledge-sharing, and continuous improvement. I'm constantly exploring new technologies and refining systems to be more efficient, resilient, and secure.
+As a Technical Team Lead, I foster collaboration, knowledge-sharing, and continuous improvement. I'm constantly exploring new technologies and refining systems to be more efficient, resilient, and secure.
 
 ## Experience
 
-### ArvanCloud.ir — Site Reliability Engineer / Team Lead
+### ArvanCloud.ir — Site Reliability Engineer / Technical Team Lead
 
 Nov 2020 - Present | Remote
 
 In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes.
 
--   Serving as the SRE Team Lead since March 2023, I oversee the reliability and performance of critical systems, contributing to the organization's overall success.
+-   Serving as the Technical Team Lead since March 2023, I oversee the reliability and performance of critical systems, contributing to the organization's overall success.
 -   Deployed and managed multiple Kubernetes, Ceph, and OpenStack clusters
 -   Provided mentorship and guidance to junior engineers and new team members, contributing to their onboarding and professional development
 -   Actively participated in planning and task calibration processes, ensuring alignment with project goals and timelines.
