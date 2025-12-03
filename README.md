@@ -1,5 +1,5 @@
 ## Milad Jahandideh
-Site Reliability Engineer | Technical Team Lead
+Site Reliability Engineer | Tech Lead
 
 [LinkedIn](https://www.linkedin.com/in/miladjahandideh/)
 
@@ -9,30 +9,28 @@ Site Reliability Engineer | Technical Team Lead
 
 ## About Me
 
-I'm a Site Reliability Engineer with several years of experience building and maintaining scalable systems. I specialize in automating infrastructure, optimizing platform reliability, and leading DevOps/SRE initiatives. My passion lies in ensuring high availability and performance at scale using tools like Kubernetes, OpenStack, and Ansible.
+I'm a Site Reliability Engineer (SRE) and Tech Lead with over 5 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.
 
-As a Technical Team Lead, I foster collaboration, knowledge-sharing, and continuous improvement. I'm constantly exploring new technologies and refining systems to be more efficient, resilient, and secure.
+At ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.
 
 ## Experience
 
-### ArvanCloud.ir — Site Reliability Engineer / Technical Team Lead
+### ArvanCloud.ir — Site Reliability Engineer / Tech Lead
 
 Nov 2020 - Present | Remote
 
 In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes.
 
--   Serving as the Technical Team Lead since March 2023, I oversee the reliability and performance of critical systems, contributing to the organization's overall success.
--   Deployed and managed multiple Kubernetes, Ceph, and OpenStack clusters
--   Provided mentorship and guidance to junior engineers and new team members, contributing to their onboarding and professional development
--   Actively participated in planning and task calibration processes, ensuring alignment with project goals and timelines.
--   Collaborated with cross-functional teams to design and implement scalable and reliable systems, prioritizing high availability and optimal performance
--   Enhanced system reliability through the implementation of efficient monitoring and alerting solutions, utilizing Prometheus and Grafana to identify and address potential issues swiftly
--   Promoted a culture of reliability and continuous improvement, advocating for best practices.
--   Implemented CI/CD pipelines using Gitlab-CI
--   Contributed significantly to an Infrastructure as a Code project written in Ansible
--   Implemented Load Balancer as a Service (LBaaS) using the OpenStack Octavia Project
--   Effectively managed dozens of microservices on Kubernetes using Helm charts
--   Played an active role in the on-call schedule, ensuring a rapid response and resolution to critical incidents, contributing to the overall stability of the systems
+-   Participate in project planning, task estimation, and prioritization to maintain alignment with organizational goals
+-   Collaborate with cross-functional teams to design and implement scalable, resilient infrastructure solutions
+-   Improve system reliability by building robust monitoring and alerting stacks using Prometheus, Grafana, and custom alerting rules
+-   Promote SRE best practices, driving a culture of reliability, automation, and continuous improvement
+-   Design and maintain CI/CD pipelines using GitLab CI, improving deployment speed and consistency
+-   Contribute to Infrastructure-as-Code initiatives using Ansible, enabling repeatable and automated deployments
+-   Implement Load Balancer as a Service (LBaaS) using the OpenStack Octavia project
+-   Deploy, operate, and optimize multiple Kubernetes clusters
+-   Manage dozens of microservices on Kubernetes using Helm charts, ensuring efficient rollouts and lifecycle management
+-   Led a VPC project connecting three OpenStack clusters using VXLAN overlays and BGP EVPN routing, leveraging OVN and Open vSwitch to deliver unified networking and secure inter-cluster communication.
 ### Reactivesearch.io — Site Reliability Engineer
 
 Dec 2022 - Apr 2023 | Remote
@@ -46,11 +44,11 @@ Dec 2018 - Nov 2020 | On-site
 -   Implemented VMware ESXi virtualization infrastructure to facilitate code development and testing for developers
 -   Managed deployment and maintenance of applications on a large-scale Linux server environment
 -   Automated repetitive tasks using Ansible and Shell Scripting
--   Containerized monolithic applications and optimized them for LXC.
--   Implemented ELK Stack to centrally collect and analyze logs from thousands of servers
+-   Containerized monolithic applications and optimized them to run on LXC
+-   Implemented ELK Stack to collect and analyze logs from thousands of servers centrally
 -   Utilized Zabbix for server monitoring
 -   Implemented UI testing automation using Selenium
--   Provided technical Linux support and assistance to developers.
+-   Provided Linux-related technical support and assistance to developers
 ### Melec.ir — Webmaster & Founder
 
 Nov 2013 - Dec 2018 | Remote
@@ -112,21 +110,6 @@ Technical and Vocational University (2011-2013)
 ### Diploma – Electronics
 
 Vocational School (2009-2011)
-
-## Trainings
-
--   AWS Essential Training for Administrators (LinkedIn, Mar 2025)
--   Programming Foundations: Algorithms (LinkedIn, Mar 2025)
--   Python Essential Training (LinkedIn, Mar 2025)
--   Linux Performance Tuning (LinkedIn, Feb 2025)
--   Advanced Linux: The Linux Kernel (LinkedIn, Jan 2025)
--   Linux: Storage Systems (LinkedIn, Jan 2025)
--   Virtualization with KVM and Qemu (LinkedIn, Dec 2024)
--   Learning RabbitMQ (LinkedIn, Nov 2024)
--   Certified Kubernetes Administrator (CKA) (Udemy, Jan 2023)
--   Go: The Complete Developer's Guide (Golang) (Udemy, Jan 2023)
--   Digital Marketing (Dehkan Digital Marketing Academy, Aug 2018)
--   Computer Operator (Amoozesh Rayaneh Sabz, Jan 2008)
 
 ## Tech Stack
 
