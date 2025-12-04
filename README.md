@@ -35,8 +35,8 @@ In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with
 
 Dec 2022 - Apr 2023 | Remote
 
--   Collaborated on a Golang codebase integrated with Ansible to provision Elasticsearch and OpenSearch clusters on AWS and GCP cloud environments.
--   Implemented CI/CD pipelines using GitHub Actions
+-   Worked as a freelance contributor on a Golang codebase integrated with Ansible to provision Elasticsearch and OpenSearch clusters on AWS and GCP cloud environments.
+-   Implemented CI/CD pipelines using GitHub Actions.
 ### Mahsan.co — Linux System Administrator
 
 Dec 2018 - Nov 2020 | On-site
