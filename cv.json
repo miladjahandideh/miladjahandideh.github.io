@@ -28,16 +28,6 @@
       ]
     },
     {
-      "company": "Reactivesearch.io",
-      "position": "Site Reliability Engineer",
-      "dates": "Dec 2022 - Apr 2023",
-      "location": "Remote",
-      "responsibilities": [
-        "Worked as a freelance contributor on a Golang codebase integrated with Ansible to provision Elasticsearch and OpenSearch clusters on AWS and GCP cloud environments.",
-        "Implemented CI/CD pipelines using GitHub Actions."
-      ]
-    },
-    {
       "company": "Mahsan.co",
       "position": "Linux System Administrator",
       "dates": "Dec 2018 - Nov 2020",
