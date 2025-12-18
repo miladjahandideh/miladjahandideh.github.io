@@ -127,6 +127,7 @@ Dec 2017 - Nov 2018 | On-site
 
 -   Worked on embedded systems for industrial applications.
 
+[Adeeco.org Archive page](https://web.archive.org/web/20181031044502/http://adeeco.org/)
 
 ## Education
 
