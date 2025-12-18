@@ -43,6 +43,8 @@ Dec 2018 - Nov 2020 | On-site
 -   Utilized Zabbix for server monitoring
 -   Implemented UI testing automation using Selenium
 -   Provided Linux-related technical support and assistance to developers
+
+
 ### Melec.ir — Webmaster & Founder
 
 Nov 2013 - Dec 2018 | Remote
@@ -54,12 +56,71 @@ Nov 2013 - Dec 2018 | Remote
     -   5,556 comments
     -   432 Q&A entries
     -   Estimated 11 million visits
+
+![Google Search Impact](./assets/melec-project/melec-ir-google-search-impact.jpeg)
+
+#### Android Application with 10k+ install
+
+- [Cafe Bazaar Link](https://cafebazaar.ir/app/com.melec?l=en)
+
+![Android Application with 10k+ install](./assets/melec-project/melec-ir-app.jpeg)
+
+#### Shop.Melec.ir was Designed OpenCart
+
+- [Shop Archive](https://web.archive.org/web/20151007060813/http://shop.melec.ir/)
+
+![Shop.Melec.ir was Designed OpenCart](./assets/melec-project/melec-ir-shop.png)
+
+#### 10th birthday of serving free educational content since 2013
+
+- [10th Birthday Post](https://melec.ir/melec-ir-10th-birthday/)
+
+![10th birthday](./assets/melec-project/melec-ir-10-years.jpeg)
+
+#### Alexa Rank of 2922 in Iran
+
+- [Alexa Ranking](https://web.archive.org/web/20220201085754/https://www.alexa.com/siteinfo/melec.ir)
+
+![Alexa Rank of 2922](./assets/melec-project/melec-ir-alexa-ranke.jpeg)
+
+
 -   Worked as an Embedded System Developer on:
     -   Ethernet Relay Controller with TCP/IP and HTTP protocol
     -   Ethernet Monitoring with TCP/IP and HTTP protocol
     -   Temperature Monitoring using LabVIEW
     -   RGB LED Controller with an Android app for mass production
     -   Numerous custom embedded systems for commercial clients
+
+#### AVR evaluation board
+
+- [Project Link](https://bit.ly/avr-evaluation-board)
+
+![AVR evaluation board](./assets/melec-project/AVR-evaluation-board.jpeg)
+
+#### Ethernet Relay Controller With TCP/IP and HTTP protocol
+
+- [Project Link](https://bit.ly/network-enc28j60)
+
+![Ethernet Relay Controller With TCP/IP and HTTP protocol](./assets/melec-project/Ethernet-Relay-Controller-With-TCPIP-and-http-protocol.jpeg)
+
+#### Bluetooth RGB Controller
+
+- [Project Link](http://bit.ly/3Cu0XNk)
+
+![Bluetooth RGB Controller](./assets/melec-project/Bluetooth-RGB-Controller.jpeg)
+
+#### Temperature monitoring and control in LabVIEW software
+
+- [Project Link](https://bit.ly/labview-monitoring)
+
+![Temperature monitoring and control in LabVIEW software](./assets/melec-project/ُTemperature-monitoring-and-control-in-LabVIEW-software.jpeg)
+
+#### Bluetooth Controller
+
+- [Project Link](https://bit.ly/home-bluetooth)
+
+![Bluetooth Controller](./assets/melec-project/Bluetooth-Controller.jpeg)
+
 ### Adeeco — Embedded Systems Developer
 
 Dec 2017 - Nov 2018 | On-site
@@ -71,39 +132,61 @@ Dec 2017 - Nov 2018 | On-site
 
 ### MS – Technology and Innovation Management
 
-Iran University of Science and Technology (2020-2022)
+**Iran University of Science and Technology** (2020-2022)
 
--   Technology and Innovation Management at the School of Management, Economics, and Progress Engineering
--   Presentations:
-    -   [Mergers & Acquisitions](https://www.slideshare.net/MiladJahandideh/mergers-acquisitions-fa)
-    -   [Trend Impact Analysis](https://www.slideshare.net/MiladJahandideh/trend-impact-analysis-248539796)
-    -   [Open Innovation](https://www.slideshare.net/MiladJahandideh/6th-generation-innovation)
-    -   [Product platform](https://www.slideshare.net/MiladJahandideh/product-platform)
+**Grade:** 16.31/20
+
+Technology and Innovation Management @ School of Management, Economics and Progress Engineering
+
+**Presentations:**
+
+- [Mergers & Acquisitions [FA]](https://www.slideshare.net/MiladJahandideh/mergers-acquisitions-fa)
+- [Trend Impact Analysis [FA]](https://www.slideshare.net/MiladJahandideh/trend-impact-analysis-248539796)
+- [Open Innovation [FA]](https://www.slideshare.net/MiladJahandideh/6th-generation-innovation)
+- [Product platform [FA]](https://www.slideshare.net/MiladJahandideh/product-platform)
+- [Thinking, Fast and Slow [FA]](https://www.aparat.com/v/v8639s8)
+
+**Verification Code (Sehat):** `14012380569379825568`
 
 ### BS – Information and Communications Technology
 
-Shamsipour Technical and Vocational College (2013-2015)
+**Shamsipour Technical and Vocational College** (2013-2015)
 
--   Final Thesis:
-    -   [Temperature monitoring and control in LabVIEW software](https://www.slideshare.net/MiladJahandideh/labviewlm35tcontrolmelecpdf)
--   Presentations:
-    -   [CDN Content Delivery Networks](https://www.slideshare.net/MiladJahandideh/cdn-content-delivery-networks)
-    -   [OTDR Optical Time Domain Reflectometer](https://www.slideshare.net/MiladJahandideh/otdr-optical-time-domain-reflectometer-fa)
-    -   [SNMP IPHost Network Monitoring](https://www.slideshare.net/MiladJahandideh/snmp-iphost-network-monitoring)
-    -   [GSM/GPRS MODULES](https://www.slideshare.net/MiladJahandideh/gsmgprs-modules)
+**Grade:** 16.76/20
+
+ICT Engineering @ Shamsipour Technical and Vocational College
+
+**Final Thesis:**
+
+- [Temperature monitoring and control in LabVIEW software [FA]](https://www.slideshare.net/MiladJahandideh/labviewlm35tcontrolmelecpdf)
+
+**Presentations:**
+
+- [CDN Content Delivery Networks [FA]](https://www.slideshare.net/MiladJahandideh/cdn-content-delivery-networks)
+- [OTDR Optical Time Domain Reflectometer [FA]](https://www.slideshare.net/MiladJahandideh/otdr-optical-time-domain-reflectometer-fa)
+- [SNMP IPHost Network Monitoring [FA]](https://www.slideshare.net/MiladJahandideh/snmp-iphost-network-monitoring)
+- [GSM/GPRS MODULES [FA]](https://www.slideshare.net/MiladJahandideh/gsmgprs-modules)
+
+**Verification Code (Sehat):** `14042088748918245106`
 
 ### AS – Electronic Engineering
 
-Technical and Vocational University (2011-2013)
+**Technical and Vocational University** (2011-2013)
 
--   Presentations:
-    -   [Orcad Pspice 9.2 Tutorial](https://www.slideshare.net/MiladJahandideh/orcad-pspice-92-tutorial-fa)
--   Projects:
-    -   [SD Memory Card Library for AVR Microcontrollers](https://github.com/miladjahandideh/sd-memory-card-library-for-avr-microcontrollers)
+**Grade:** 18.06/20
+
+Electronic Engineering @ Enghelāb-e Eslāmi Technical College
+
+**Resources:**
+
+- [Orcad Pspice 9.2 Tutorial [FA]](https://www.slideshare.net/MiladJahandideh/orcad-pspice-92-tutorial-fa)
+- [SD Memory Card Library for AVR Microcontrollers](https://github.com/miladjahandideh/sd-memory-card-library-for-avr-microcontrollers)
+
+**Verification Code (Sehat):** `14042370219301862698`
 
 ### Diploma – Electronics
 
-Vocational School (2009-2011)
+**Vocational School** (2009-2011)
 
 ## Tech Stack
 
