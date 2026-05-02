@@ -9,7 +9,7 @@ Site Reliability Engineer | Tech Lead
 
 ## About Me
 
-I'm a Site Reliability Engineer (SRE) and Tech Lead with over 5 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.
+I'm a Site Reliability Engineer (SRE) and Tech Lead with more than 7 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.
 
 At ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.
 
@@ -31,6 +31,7 @@ In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with
 -   Deploy, operate, and optimize multiple Kubernetes clusters
 -   Manage dozens of microservices on Kubernetes using Helm charts, ensuring efficient rollouts and lifecycle management
 -   Led a VPC project connecting three OpenStack clusters using VXLAN overlays and BGP EVPN routing, leveraging OVN and Open vSwitch to deliver unified networking and secure inter-cluster communication.
+
 ### Mahsan.co — Linux System Administrator
 
 Dec 2018 - Nov 2020 | On-site
@@ -137,7 +138,7 @@ Dec 2017 - Nov 2018 | On-site
 
 **Grade:** 16.31/20
 
-Technology and Innovation Management @ School of Management, Economics and Progress Engineering
+Technology and Innovation Management at the School of Management, Economics, and Progress Engineering
 
 **Presentations:**
 
@@ -191,4 +192,6 @@ Electronic Engineering @ Enghelāb-e Eslāmi Technical College
 
 ## Tech Stack
 
-Amazon AWS, OpenStack, Terraform, VMware ESXi, KVM, QEMU, Ceph, Python, Golang, Docker, Kubernetes, Helm, GitLab, ArgoCD, Ansible, MariaDB, Grafana, Prometheus, OpenSearch, RabbitMQ, Jaeger, Linux, Redis
+_Order matches `cv.json` `tech_stack`._
+
+Linux, OpenStack, Ceph, Golang, Kubernetes, Amazon AWS, Ansible, Terraform, VMware ESXi, KVM, QEMU, Python, Docker, Helm, GitLab, ArgoCD, MariaDB, Grafana, Prometheus, OpenSearch, RabbitMQ, Jaeger, Redis, Bash, GitHub Actions, Zabbix, Windows Server, OVN, Open vSwitch, Cloud Solution Architecture, DevOps, Infrastructure as Code (IaC), Amazon S3, Amazon EC2, Networking, Git

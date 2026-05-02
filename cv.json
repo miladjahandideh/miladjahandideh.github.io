@@ -5,7 +5,7 @@
     "email": "milad.jahandideh.u@gmail.com",
     "website": "https://milad-jahandideh.com/"
   },
-  "about_me": "I'm a Site Reliability Engineer (SRE) and Tech Lead with over 5 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.\n\nAt ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.",
+  "about_me": "I'm a Site Reliability Engineer (SRE) and Tech Lead with more than 7 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.\n\nAt ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.",
   "experience": [
     {
       "company": "ArvanCloud.ir",
@@ -56,7 +56,6 @@
     {
       "degree": "MS – Technology and Innovation Management",
       "school": "Iran University of Science and Technology",
-      "years": "2020-2022",
       "details": "Technology and Innovation Management at the School of Management, Economics, and Progress Engineering",
       "presentations": [
         "https://www.slideshare.net/MiladJahandideh/mergers-acquisitions-fa",
@@ -68,7 +67,6 @@
     {
       "degree": "BS – Information and Communications Technology",
       "school": "Shamsipour Technical and Vocational College",
-      "years": "2013-2015",
       "thesis": "https://www.slideshare.net/MiladJahandideh/labviewlm35tcontrolmelecpdf",
       "presentations": [
         "https://www.slideshare.net/MiladJahandideh/cdn-content-delivery-networks",
@@ -80,7 +78,6 @@
     {
       "degree": "AS – Electronic Engineering",
       "school": "Technical and Vocational University",
-      "years": "2011-2013",
       "presentations": [
         "https://www.slideshare.net/MiladJahandideh/orcad-pspice-92-tutorial-fa"
       ],
@@ -90,33 +87,45 @@
     },
     {
       "degree": "Diploma – Electronics",
-      "school": "Vocational School",
-      "years": "2009-2011"
+      "school": "Vocational School"
     }
   ],
   "tech_stack": [
-    "Amazon AWS",
+    "Linux",
     "OpenStack",
+    "Ceph",
+    "Golang",
+    "Kubernetes",
+    "Amazon AWS",
+    "Ansible",
     "Terraform",
     "VMware ESXi",
     "KVM",
     "QEMU",
-    "Ceph",
     "Python",
-    "Golang",
     "Docker",
-    "Kubernetes",
     "Helm",
     "GitLab",
     "ArgoCD",
-    "Ansible",
     "MariaDB",
     "Grafana",
     "Prometheus",
     "OpenSearch",
     "RabbitMQ",
     "Jaeger",
-    "Linux",
-    "Redis"
+    "Redis",
+    "Bash",
+    "GitHub Actions",
+    "Zabbix",
+    "Windows Server",
+    "OVN",
+    "Open vSwitch",
+    "Cloud Solution Architecture",
+    "DevOps",
+    "Infrastructure as Code (IaC)",
+    "Amazon S3",
+    "Amazon EC2",
+    "Networking",
+    "Git"
   ]
 }
