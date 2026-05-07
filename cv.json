@@ -90,6 +90,45 @@
       "school": "Vocational School"
     }
   ],
+  "projects": {
+    "items": [
+      {
+        "id": "melec",
+        "title": "Melec.ir",
+        "subtitle": "Founder & Webmaster",
+        "logo": "assets/logos/melec-logo.png",
+        "summary": "Electronics & Microcontroller education community",
+        "years": "Nov 2013 – Dec 2018",
+        "location": "Remote",
+        "description": "Founded Melec.ir to share Electronic Engineering and microcontroller programming content as a side project during university. Personally authored 500+ posts and grew a strong presence in the Persian embedded systems community.",
+        "stats": [
+          { "label": "Posts authored myself", "value": "500+", "icon": "pen" },
+          { "label": "Published posts (site)", "value": "1,075", "icon": "file-lines" },
+          { "label": "Comments", "value": "5,556", "icon": "comments" },
+          { "label": "Q&A entries", "value": "432", "icon": "circle-question" },
+        { "label": "Daily users", "value": "~2k", "icon": "users" },
+        { "label": "Android app installs", "value": "17k+", "icon": "download" }
+        ],
+        "links": [
+          { "url": "https://melec.ir/", "label": "Website", "icon": "link" },
+          { "url": "https://cafebazaar.ir/app/com.melec?l=en", "label": "Android app (Cafe Bazaar)", "icon": "store" },
+          { "url": "https://web.archive.org/web/20151007060813/http://shop.melec.ir/", "label": "Shop archive (OpenCart)", "icon": "cart-shopping" },
+        { "url": "https://melec.ir/melec-ir-10th-birthday/", "label": "10th anniversary post", "icon": "link" },
+        { "url": "https://web.archive.org/web/20220201085754/https://www.alexa.com/siteinfo/melec.ir", "label": "Alexa site info (archive)", "icon": "link" }
+        ],
+        "embedded_work": {
+          "intro": "Worked as an Embedded System Developer on:",
+          "items": [
+            "Ethernet Relay Controller with TCP/IP and HTTP protocol",
+            "Ethernet Monitoring with TCP/IP and HTTP protocol",
+            "Temperature Monitoring using LabVIEW",
+            "RGB LED Controller with an Android app for mass production",
+            "Numerous custom embedded systems for commercial clients"
+          ]
+        }
+      }
+    ]
+  },
   "tech_stack": [
     "Linux",
     "OpenStack",
@@ -127,5 +166,11 @@
     "Amazon EC2",
     "Networking",
     "Git"
-  ]
+  ],
+  "languages": [
+    { "name": "Persian", "level": "Native" },
+    { "name": "Turkish", "level": "Professional working proficiency" },
+    { "name": "English", "level": "Professional working proficiency" }
+  ],
+  "footer_tagline": "Thinks in Bash"
 }

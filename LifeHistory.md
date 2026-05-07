@@ -51,20 +51,20 @@ Dec 2018 - Nov 2020 | On-site
 Nov 2013 - Dec 2018 | Remote
 
 -   Founded Melec.ir in Nov 2013 to share content about Electronic Engineering and Microcontroller programming as a side project during university studies
--   Personally authored over 500 blog posts focused on Electronics, Microcontrollers, and Programming
+-   Authored 500+ blog posts myself, focused on Electronics, Microcontrollers, and Programming
 -   Built a strong online presence in the Persian embedded systems community, resulting in:
     -   1,075 published posts
     -   5,556 comments
     -   432 Q&A entries
-    -   Estimated 11 million visits
+    -   Estimated ~2k daily users
 
 ![Google Search Impact](./assets/melec-project/melec-ir-google-search-impact.jpeg)
 
-#### Android Application with 10k+ install
+#### Android Application with 17k+ install
 
 - [Cafe Bazaar Link](https://cafebazaar.ir/app/com.melec?l=en)
 
-![Android Application with 10k+ install](./assets/melec-project/melec-ir-app.jpeg)
+![Android Application with 17k+ install](./assets/melec-project/melec-ir-app.jpeg)
 
 #### Shop.Melec.ir was Designed OpenCart
 
@@ -148,7 +148,7 @@ Technology and Innovation Management at the School of Management, Economics, and
 - [Product platform [FA]](https://www.slideshare.net/MiladJahandideh/product-platform)
 - [Thinking, Fast and Slow [FA]](https://www.aparat.com/v/v8639s8)
 
-**Verification Code (Sehat):** `14012380569379825568`
+**Verification Code:** `14012380569379825568`
 
 ### BS – Information and Communications Technology
 
@@ -169,7 +169,7 @@ ICT Engineering @ Shamsipour Technical and Vocational College
 - [SNMP IPHost Network Monitoring [FA]](https://www.slideshare.net/MiladJahandideh/snmp-iphost-network-monitoring)
 - [GSM/GPRS MODULES [FA]](https://www.slideshare.net/MiladJahandideh/gsmgprs-modules)
 
-**Verification Code (Sehat):** `14042088748918245106`
+**Verification Code:** `14042088748918245106`
 
 ### AS – Electronic Engineering
 
@@ -184,7 +184,7 @@ Electronic Engineering @ Enghelāb-e Eslāmi Technical College
 - [Orcad Pspice 9.2 Tutorial [FA]](https://www.slideshare.net/MiladJahandideh/orcad-pspice-92-tutorial-fa)
 - [SD Memory Card Library for AVR Microcontrollers](https://github.com/miladjahandideh/sd-memory-card-library-for-avr-microcontrollers)
 
-**Verification Code (Sehat):** `14042370219301862698`
+**Verification Code:** `14042370219301862698`
 
 ### Diploma – Electronics
 

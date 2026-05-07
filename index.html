@@ -3,114 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('cv-dark-mode') === '1') {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <title>Milad Jahandideh - Site Reliability Engineer | Tech Lead</title>
+    <meta name="description" content="Milad Jahandideh is a Site Reliability Engineer and Tech Lead, specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Milad Jahandideh - Site Reliability Engineer | Tech Lead">
+    <meta property="og:description" content="Site Reliability Engineer and Tech Lead specializing in OpenStack, Ceph, and Kubernetes infrastructure management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milad-jahandideh.com/">
+    <link rel="canonical" href="https://milad-jahandideh.com/">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-22S93JKNHS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-22S93JKNHS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-22S93JKNHS');
     </script>
-    <title>Milad Jahandideh - Site Reliability Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
-            --bg-color: #f0f0f0;
-            --text-color: #333;
-            --container-bg: #fff;
+            color-scheme: light;
+            --page-bg: #f3f2ef;
+            --card-bg: #ffffff;
+            --text: rgba(0, 0, 0, 0.9);
+            --muted: rgba(0, 0, 0, 0.6);
+            --muted-light: rgba(0, 0, 0, 0.45);
+            --accent: #0a66c2;
+            --accent-hover: #004182;
+            --border: rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --shadow: 0 0 0 1px var(--border), 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --logo-bg: #eef3f8;
+            --chip-bg: #eef3f8;
+            --chip-text: #38434f;
+            --cover-fallback: linear-gradient(135deg, #1e3a5f 0%, #3d6b9a 50%, #6b9cc9 100%);
         }
 
-        /* General dark mode styles */
-        .dark-mode {
-            --bg-color: #121212;
-            --text-color: #ffffff;
-            --container-bg: #1e1e1e;
+        html.dark-mode {
+            color-scheme: dark;
+            --page-bg: #1b1f23;
+            --card-bg: #24292f;
+            --text: rgba(255, 255, 255, 0.92);
+            --muted: rgba(255, 255, 255, 0.62);
+            --muted-light: rgba(255, 255, 255, 0.45);
+            --accent: #70b7f9;
+            --accent-hover: #a8d4ff;
+            --border: rgba(255, 255, 255, 0.12);
+            --shadow: 0 0 0 1px var(--border), 0 2px 8px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.45);
+            --logo-bg: #32383f;
+            --chip-bg: #32383f;
+            --chip-text: #e8edf3;
+            --cover-fallback: linear-gradient(135deg, #0f1720 0%, #1a2838 50%, #243447 100%);
         }
 
-        /* Apply dark mode styles to elements */
-        .dark-mode body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .dark-mode .container {
-            background-color: var(--container-bg);
-        }
-
-        .dark-mode h1 {
-            color: #f8f8f8; /* Lighter text for h1 */
-        }
-
-        .dark-mode p {
-            color: #f5f5f5; /* Lighter text for paragraphs */
-        }
-
-        .dark-mode .profile-image {
-            border-color: #00ff00; /* Lighter border in dark mode */
-        }
-
-        .dark-mode .social-icons a {
-            background-color: #0f172a; /* Dark background for icons */
-            color: #fff;
-            border-color: #00ff00; /* Lighter border color */
-        }
-
-        .dark-mode .social-icons a:hover {
-            background-color: #00ff00;
-            color: #000;
-            border-color: #000;
-        }
-
-        .dark-mode .dark-mode-toggle {
-            background-color: #00ff00;
-            color: #000;
-            border-color: #00ff00;
-        }
-
-        .dark-mode .dark-mode-toggle:hover {
-            background-color: #00ff00;
-            color: #000;
-            border-color: #00ff00;
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
         }
 
         body {
-            font-family: 'Fira Mono', monospace;
-            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 14px;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--accent-hover);
+        }
+
+        .page {
+            max-width: 1128px;
+            margin: 0 auto;
+            padding: 0 16px 48px;
+        }
+
+        /* Cover — add assets/cover.jpg (or .png / .webp); fallback gradient if missing */
+        .cover-wrap {
+            border-radius: 0 0 var(--radius) var(--radius);
+            overflow: hidden;
+            margin: 0 -16px;
+            box-shadow: var(--shadow);
+        }
+
+        @media (min-width: 1160px) {
+            .cover-wrap {
+                margin: 0;
+                border-radius: var(--radius);
+                margin-top: 12px;
+            }
+        }
+
+        .cover {
+            height: 200px;
+            background: var(--cover-fallback);
+            background-image: url('assets/cover.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Profile intro card */
+        .profile-intro {
+            position: relative;
+            margin-top: -76px;
+            padding: 0 24px 20px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 8px;
+        }
+
+        .avatar-wrap {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s ease;
+            align-items: flex-end;
+            gap: 16px;
+            margin-bottom: 12px;
         }
 
-        .container {
-            background-color: var(--container-bg);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            transition: background-color 0.3s ease;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
+        .avatar {
+            position: relative;
+            width: 152px;
+            height: 152px;
             border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            background: var(--logo-bg);
+            overflow: hidden;
+            flex-shrink: 0;
+            margin-top: -76px;
+            box-shadow: var(--shadow);
+        }
+
+        .avatar-initials {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--muted);
+            z-index: 0;
+        }
+
+        .avatar img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 2px solid #00ff00;
+            display: none;
+            z-index: 1;
+        }
+
+        .avatar img.is-loaded {
+            display: block;
+        }
+
+        .avatar img.is-loaded + .avatar-initials {
+            display: none;
+        }
+
+        .identity {
+            flex: 1;
+            padding-top: 8px;
+            min-width: 0;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .profile-headline {
+            margin-top: 4px;
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 400;
         }
 
         .social-icons {
-            margin: 20px 0;
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
         }
 
         .social-icons a {
@@ -119,141 +232,1869 @@
             align-items: center;
             width: 40px;
             height: 40px;
-            margin: 0 10px;
             border-radius: 50%;
-            background-color: #e0e0e0;
-            color: #333;
+            background: var(--chip-bg);
+            color: var(--chip-text);
             text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-            border: 1px solid #00ff00;
-            font-size: 1.2em;
+            font-size: 1.15rem;
+            border: 1px solid var(--border);
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
         }
 
         .social-icons a:hover {
-            background-color: #00ff00;
-            transform: scale(1.1);
-            border-color: #00ff00;
+            background: var(--accent);
             color: #fff;
+            border-color: var(--accent);
+            text-decoration: none;
+            transform: scale(1.06);
         }
 
+        .social-icons a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .social-icons a {
+                transition: none;
+            }
+
+            .social-icons a:hover {
+                transform: none;
+            }
+        }
+
+        /* Dark mode toggle */
         .dark-mode-toggle {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #00ff00;
-            border: 2px solid #00ff00;
-            padding: 10px 15px;
-            border-radius: 5px;
+            top: max(16px, env(safe-area-inset-top, 0px));
+            right: max(16px, env(safe-area-inset-right, 0px));
+            z-index: 100;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text);
+            box-shadow: var(--shadow);
             cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-            font-family: 'Fira Mono', monospace;
-            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
         }
 
         .dark-mode-toggle:hover {
-            background-color: #00ff00;
-            border-color: #00ff00;
+            background: var(--chip-bg);
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
-        h1 {
-            font-size: 2.2em;
+        .dark-mode-toggle:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 16px 20px 18px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #222;
-            transition: color 0.3s ease;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
 
-        p {
-            font-size: 1.1em;
+        .content-section {
+            scroll-margin-top: 24px;
+        }
+
+        .prose {
+            color: var(--text);
+            font-size: 14px;
             line-height: 1.6;
-            color: #444;
-            transition: color 0.3s ease;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
+        .prose p + p {
+            margin-top: 12px;
+        }
+
+        /* Experience */
+        .experience-card {
+            display: flex;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .experience-card:first-child {
+            padding-top: 0;
+        }
+
+        .org-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            /* Match card so transparent PNG/SVG logos don’t sit on gray */
+            background: var(--card-bg);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .org-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .experience-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .experience-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        .role-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .role-meta {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .role-dates {
+            font-size: 12px;
+            color: var(--muted-light);
+            white-space: nowrap;
+        }
+
+        .role-summary {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .role-list {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .role-list li {
+            margin-bottom: 6px;
+            padding-left: 4px;
+        }
+
+        .role-list li::marker {
+            color: var(--muted-light);
+        }
+
+        /* Education & Projects (shared row layout) */
+        .education-card,
+        .project-card {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: flex-start;
+        }
+
+        .education-card:last-child,
+        .project-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .education-card:first-child,
+        .project-card:first-child {
+            padding-top: 0;
+        }
+
+        .edu-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-body .degree {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Institution line + icon-only details trigger */
+        .edu-institution-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 2px;
+        }
+
+        .edu-institution-row .institution {
+            flex: 1;
+            min-width: 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Icon-only button — end of institution row (~44px touch target) */
+        .edu-details-btn,
+        .project-details-btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin: -10px -6px -10px 0;
+            padding: 0;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            background: transparent;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .edu-details-btn:hover,
+        .project-details-btn:hover {
+            background: var(--chip-bg);
+            color: var(--accent);
+            border-color: var(--border);
+        }
+
+        .edu-details-btn:focus-visible,
+        .project-details-btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .edu-details-btn:active,
+        .project-details-btn:active {
+            transform: scale(0.96);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .edu-details-btn,
+            .project-details-btn {
+                transition: none;
             }
 
-            .profile-image {
-                width: 100px;
-                height: 100px;
-            }
-
-            .social-icons a {
-                width: 30px;
-                height: 30px;
-                margin: 0 5px;
-            }
-            .dark-mode-toggle{
-               font-size: 0.8rem;
-               padding: 8px 12px;
-            }
-            h1{
-                font-size: 1.8em;
-            }
-            p{
-                font-size: 1rem;
+            .edu-details-btn:active,
+            .project-details-btn:active {
+                transform: none;
             }
         }
-        .linux-button {
-            display: inline-block;
-            font-family: 'Fira Mono', monospace;
-            font-size: 1em;
-            padding: 10px 20px;
-            color: #00ff00;
-            background-color: #000;
-            border: 2px solid #00ff00;
-            border-radius: 5px;
+
+        /* Education modal */
+        .edu-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 200;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        html.dark-mode .edu-modal-backdrop {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .edu-modal-backdrop.is-open {
+            opacity: 1;
+        }
+
+        .edu-modal-backdrop[hidden] {
+            display: none !important;
+        }
+
+        .edu-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% + 8px));
+            width: min(560px, calc(100vw - 32px));
+            max-height: min(85vh, 720px);
+            background: var(--card-bg);
+            color: var(--text);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
+            z-index: 201;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .edu-modal.is-open {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .edu-modal[hidden] {
+            display: none !important;
+        }
+
+        .edu-modal-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            background: var(--card-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .edu-modal-logo {
+            width: 44px;
+            height: 44px;
+        }
+
+        .edu-modal-heading {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-modal-heading h3 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            color: var(--text);
+        }
+
+        .edu-modal-heading p {
+            margin-top: 2px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .edu-modal-close {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--muted);
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .edu-modal-close:hover {
+            background: var(--chip-bg);
+            color: var(--text);
+            border-color: var(--border);
+        }
+
+        .edu-modal-close:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .edu-modal-body {
+            padding: 16px 20px 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .edu-section + .edu-section {
+            margin-top: 18px;
+        }
+
+        .edu-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .edu-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .edu-fact {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--chip-bg);
+            color: var(--chip-text);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .edu-fact i {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .edu-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .edu-modal-body .edu-section .edu-description + ul.role-list {
+            margin-top: 10px;
+        }
+
+        .edu-link-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .edu-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--card-bg);
+            color: var(--text);
+            font-size: 13.5px;
+            line-height: 1.4;
             text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
         }
 
-        .linux-button:hover {
-            background-color: #00ff00;
-            color: #000;
-            transform: scale(1.05);
+        .edu-link:hover {
+            background: var(--chip-bg);
+            border-color: var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .edu-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .edu-link .edu-link-icon {
+            flex-shrink: 0;
+            width: 18px;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .edu-link:hover .edu-link-icon {
+            color: var(--accent);
+        }
+
+        .edu-link .edu-link-label {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-link .edu-link-arrow {
+            flex-shrink: 0;
+            font-size: 11px;
+            color: var(--muted-light);
+        }
+
+        .edu-sehat {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            background: var(--chip-bg);
+        }
+
+        .edu-sehat-code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+            font-size: 13px;
+            color: var(--text);
+            word-break: break-all;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-sehat-copy {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--card-bg);
+            color: var(--text);
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .edu-sehat-copy:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .edu-sehat-copy:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .edu-sehat-copy.is-copied {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .edu-modal,
+            .edu-modal-backdrop,
+            .edu-link,
+            .edu-sehat-copy,
+            .edu-modal-close {
+                transition: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .edu-modal {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-width: 100%;
+                max-height: 90vh;
+                transform: translateY(16px);
+                border-radius: var(--radius) var(--radius) 0 0;
+            }
+
+            .edu-modal.is-open {
+                transform: translateY(0);
+            }
+
+            .edu-modal-header {
+                padding: 14px 16px;
+            }
+
+            .edu-modal-body {
+                padding: 14px 16px 24px;
+            }
+        }
+
+        /* Skills */
+        ul.chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--chip-bg);
+            color: var(--chip-text);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        ul.chips > li.empty-hint {
+            flex-basis: 100%;
+            padding: 0;
+            font-weight: 400;
+        }
+
+        .empty-hint {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .site-footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .site-footer__tagline {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--muted);
+            margin: 0;
+            max-width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .cover {
+                height: 140px;
+            }
+
+            .profile-intro {
+                padding: 0 16px 16px;
+                margin-top: -60px;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+                margin-top: -60px;
+            }
+
+            .avatar-initials {
+                font-size: 36px;
+            }
+
+            .avatar-wrap {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .identity {
+                padding-top: 0;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .experience-top {
+                flex-direction: column;
+            }
+
+            .role-dates {
+                white-space: normal;
+            }
+        }
+
+        @media print {
+            html.dark-mode {
+                color-scheme: light;
+                --page-bg: #fff;
+                --card-bg: #fff;
+                --text: rgba(0, 0, 0, 0.9);
+                --muted: rgba(0, 0, 0, 0.6);
+                --muted-light: rgba(0, 0, 0, 0.45);
+                --accent: #0a66c2;
+                --accent-hover: #004182;
+                --border: rgba(0, 0, 0, 0.12);
+                --shadow: none;
+                --logo-bg: #f3f2ef;
+                --chip-bg: #eef3f8;
+                --chip-text: #38434f;
+            }
+
+            body {
+                background: #fff !important;
+            }
+
+            .dark-mode-toggle {
+                display: none !important;
+            }
+
+            .edu-details-btn,
+            .project-details-btn,
+            .edu-modal,
+            .edu-modal-backdrop {
+                display: none !important;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="./assets/profile-image.jpeg" alt="Milad Jahandideh" class="profile-image" loading="lazy">
-        <h1>Milad Jahandideh</h1>
-        <p>Site Reliability Engineer | Tech Lead</p>
-        <div class="social-icons">
-            <a href="https://github.com/miladjahandideh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://stackoverflow.com/users/10885754/milad-jahandideh" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
-                <i class="fab fa-stack-overflow"></i>
-            </a>
+    <div class="page">
+        <div class="cover-wrap">
+            <div class="cover" role="img" aria-label="Cover photo"></div>
         </div>
-        <p>I am currently serving as the Tech Lead at ArvanCloud.ir, providing Infrastructure as a Service (IaaS) solutions using OpenStack, Ceph, and Kubernetes. I oversee the reliability and performance of critical systems.</p>
-        <p>My inbox (milad.jahandideh.u@gmail.com) is always open. Feel free to reach out with any questions or opportunities, and I’ll get back to you as soon as I can!</p>
-        <div style="margin-top: 30px;">
-            <a href="src/cv.html" class="linux-button" target="_blank">
-                <i class="fas fa-terminal" style="margin-right: 8px;"></i> Launch Full CV
-            </a>
-        </div>
+
+        <header class="profile-intro">
+            <div class="avatar-wrap">
+                <div class="avatar">
+                    <img id="avatar-img" src="assets/profile-image.jpeg" alt="Milad Jahandideh" width="152" height="152" fetchpriority="high" decoding="async">
+                    <span class="avatar-initials" id="avatar-fallback">MJ</span>
+                </div>
+                <div class="identity">
+                    <h1 class="profile-name">Milad Jahandideh</h1>
+                    <p class="profile-headline">Site Reliability Engineer | Tech Lead</p>
+                    <div class="social-icons">
+                        <a href="mailto:milad.jahandideh.u@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/miladjahandideh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://stackoverflow.com/users/10885754/milad-jahandideh" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+                            <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="card content-section" id="about" aria-labelledby="about-heading">
+                <h2 class="card-title" id="about-heading">About</h2>
+                <div class="prose">
+                    <p>I'm a Site Reliability Engineer (SRE) and Tech Lead with more than 7 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.</p>
+                    <p>At ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.</p>
+                </div>
+            </section>
+
+            <section class="card content-section" id="experience" aria-labelledby="experience-heading">
+                <h2 class="card-title" id="experience-heading">Experience</h2>
+
+                <article class="experience-card">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/arvancloud-logo.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-body">
+                        <div class="experience-top">
+                            <div>
+                                <div class="role-title">Site Reliability Engineer / Tech Lead</div>
+                                <div class="role-meta">ArvanCloud.ir · Full-time</div>
+                            </div>
+                            <div class="role-dates">Nov 2020 – Present</div>
+                        </div>
+                        <p class="role-summary">Infrastructure as a Service (IaaS) with OpenStack, Ceph, and Kubernetes.</p>
+                        <ul class="role-list">
+                            <li>Participate in project planning, task estimation, and prioritization to maintain alignment with organizational goals.</li>
+                            <li>Collaborate with cross-functional teams to design and implement scalable, resilient infrastructure solutions.</li>
+                            <li>Improve system reliability by building robust monitoring and alerting stacks using Prometheus, Grafana, and custom alerting rules.</li>
+                            <li>Promote SRE best practices, driving a culture of reliability, automation, and continuous improvement.</li>
+                            <li>Design and maintain CI/CD pipelines using GitLab CI, improving deployment speed and consistency.</li>
+                            <li>Contribute to Infrastructure-as-Code initiatives using Ansible, enabling repeatable and automated deployments.</li>
+                            <li>Implement Load Balancer as a Service (LBaaS) using the OpenStack Octavia project.</li>
+                            <li>Deploy, operate, and optimize multiple Kubernetes clusters.</li>
+                            <li>Manage dozens of microservices on Kubernetes using Helm charts, ensuring efficient rollouts and lifecycle management.</li>
+                            <li>Led a VPC project connecting three OpenStack clusters using VXLAN overlays and BGP EVPN routing, leveraging OVN and Open vSwitch to deliver unified networking and secure inter-cluster communication.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/mahsan-co-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-body">
+                        <div class="experience-top">
+                            <div>
+                                <div class="role-title">Linux System Administrator</div>
+                                <div class="role-meta">Mahsan.co · Full-time</div>
+                            </div>
+                            <div class="role-dates">Dec 2018 – Nov 2020</div>
+                        </div>
+                        <ul class="role-list">
+                            <li>Implemented VMware ESXi virtualization infrastructure to facilitate code development and testing for developers.</li>
+                            <li>Managed deployment and maintenance of applications on a large-scale Linux server environment.</li>
+                            <li>Automated repetitive tasks using Ansible and Shell Scripting.</li>
+                            <li>Containerized monolithic applications and optimized them to run on LXC.</li>
+                            <li>Implemented ELK Stack to collect and analyze logs from thousands of servers centrally.</li>
+                            <li>Utilized Zabbix for server monitoring.</li>
+                            <li>Implemented UI testing automation using Selenium.</li>
+                            <li>Provided Linux-related technical support and assistance to developers.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/adeeco-ir-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-body">
+                        <div class="experience-top">
+                            <div>
+                                <div class="role-title">Embedded Systems Developer</div>
+                                <div class="role-meta">Adeeco · Full-time</div>
+                            </div>
+                            <div class="role-dates">Dec 2017 – Nov 2018</div>
+                        </div>
+                        <ul class="role-list">
+                            <li>Worked on embedded systems for industrial applications.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card content-section" id="education" aria-labelledby="education-heading">
+                <h2 class="card-title" id="education-heading">Education</h2>
+
+                <article class="education-card" data-edu-id="ms-iust">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/IUST-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">MS – Technology and Innovation Management</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Iran University of Science and Technology</div>
+                            <button type="button" class="edu-details-btn" aria-haspopup="dialog" aria-controls="edu-modal" data-edu-id="ms-iust" aria-label="More details for MS – Technology and Innovation Management">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="education-card" data-edu-id="bs-shamsipour">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/Shamsipour-fa-logo.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">BS – Information and Communications Technology</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Shamsipour Technical and Vocational College</div>
+                            <button type="button" class="edu-details-btn" aria-haspopup="dialog" aria-controls="edu-modal" data-edu-id="bs-shamsipour" aria-label="More details for BS – Information and Communications Technology">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="education-card" data-edu-id="as-tvu">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/National_University_of_Skills.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">AS – Electronic Engineering</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Technical and Vocational University</div>
+                            <button type="button" class="edu-details-btn" aria-haspopup="dialog" aria-controls="edu-modal" data-edu-id="as-tvu" aria-label="More details for AS – Electronic Engineering">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="education-card" data-edu-id="diploma">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/Vocational-School.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">Diploma – Electronics</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Vocational School</div>
+                            <button type="button" class="edu-details-btn" aria-haspopup="dialog" aria-controls="edu-modal" data-edu-id="diploma" aria-label="More details for Diploma – Electronics">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card content-section" id="projects" aria-labelledby="projects-heading">
+                <h2 class="card-title" id="projects-heading">Projects</h2>
+
+                <article class="project-card">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/melec-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">Melec.ir</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Founder & Webmaster · Electronics & Microcontroller education community</div>
+                            <button type="button" class="project-details-btn" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="melec" aria-label="More details for Melec.ir">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card content-section" id="skills" aria-labelledby="skills-heading">
+                <h2 class="card-title" id="skills-heading">Skills</h2>
+                <ul class="chips" id="skills-chips-top"></ul>
+            </section>
+        </main>
+
+        <footer class="site-footer" aria-label="Page footer">
+            <p class="site-footer__tagline" id="site-footer-tagline"></p>
+        </footer>
     </div>
-    <button type="button" class="dark-mode-toggle" aria-label="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+
+    <button type="button" class="dark-mode-toggle" aria-label="Switch to dark mode" title="Theme"></button>
+
+    <div class="edu-modal-backdrop" id="edu-modal-backdrop" hidden></div>
+    <div class="edu-modal" id="edu-modal" role="dialog" aria-modal="true" aria-labelledby="edu-modal-title" aria-describedby="edu-modal-desc" hidden>
+        <header class="edu-modal-header">
+            <div class="org-logo edu-modal-logo" id="edu-modal-logo" aria-hidden="true"></div>
+            <div class="edu-modal-heading">
+                <h3 id="edu-modal-title"></h3>
+                <p id="edu-modal-school"></p>
+            </div>
+            <button type="button" class="edu-modal-close" id="edu-modal-close" aria-label="Close details">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </header>
+        <div class="edu-modal-body" id="edu-modal-desc"></div>
+    </div>
+
+    <div class="edu-modal-backdrop" id="project-modal-backdrop" hidden></div>
+    <div class="edu-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" aria-describedby="project-modal-desc" hidden>
+        <header class="edu-modal-header">
+            <div class="org-logo edu-modal-logo" id="project-modal-logo" aria-hidden="true"></div>
+            <div class="edu-modal-heading">
+                <h3 id="project-modal-title"></h3>
+                <p id="project-modal-subtitle"></p>
+            </div>
+            <button type="button" class="edu-modal-close" id="project-modal-close" aria-label="Close project details">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </header>
+        <div class="edu-modal-body" id="project-modal-desc"></div>
+    </div>
+
+    <!-- Keep in sync with tech_stack in cv.json -->
+    <script type="application/json" id="cv-skills-data">
+{
+  "tech_stack": [
+    "Linux",
+    "OpenStack",
+    "Ceph",
+    "Golang",
+    "Kubernetes",
+    "Amazon AWS",
+    "Ansible",
+    "Terraform",
+    "VMware ESXi",
+    "KVM",
+    "QEMU",
+    "Python",
+    "Docker",
+    "Helm",
+    "GitLab",
+    "ArgoCD",
+    "MariaDB",
+    "Grafana",
+    "Prometheus",
+    "OpenSearch",
+    "RabbitMQ",
+    "Jaeger",
+    "Redis",
+    "Bash",
+    "GitHub Actions",
+    "Zabbix",
+    "Windows Server",
+    "OVN",
+    "Open vSwitch",
+    "Cloud Solution Architecture",
+    "DevOps",
+    "Infrastructure as Code (IaC)",
+    "Amazon S3",
+    "Amazon EC2",
+    "Networking",
+    "Git"
+  ]
+}
+    </script>
+
+    <!-- Footer tagline: keep in sync with name, languages, footer_tagline in cv.json -->
+    <script type="application/json" id="cv-footer-data">
+{
+  "name": "Milad Jahandideh",
+  "languages": [
+    { "name": "Persian", "level": "Native" },
+    { "name": "Turkish", "level": "Professional working proficiency" },
+    { "name": "English", "level": "Professional working proficiency" }
+  ],
+  "footer_tagline": "Thinks in Bash"
+}
+    </script>
+
+    <!-- Education details for the per-card modal. Sourced from LifeHistory.md / cv.json. -->
+    <script type="application/json" id="cv-education-data">
+{
+  "items": [
+    {
+      "id": "ms-iust",
+      "degree": "MS – Technology and Innovation Management",
+      "school": "Iran University of Science and Technology",
+      "logo": "assets/logos/IUST-logo.png",
+      "years": "2020 – 2022",
+      "grade": "16.31 / 20",
+      "description": "Technology and Innovation Management at the School of Management, Economics, and Progress Engineering.",
+      "presentations": [
+        { "url": "https://www.slideshare.net/MiladJahandideh/mergers-acquisitions-fa", "label": "Mergers & Acquisitions [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/trend-impact-analysis-248539796", "label": "Trend Impact Analysis [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/6th-generation-innovation", "label": "Open Innovation [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/product-platform", "label": "Product Platform [FA]" },
+        { "url": "https://www.aparat.com/v/v8639s8", "label": "Thinking, Fast and Slow [FA]" }
+      ],
+      "sehat": "14012380569379825568"
+    },
+    {
+      "id": "bs-shamsipour",
+      "degree": "BS – Information and Communications Technology",
+      "school": "Shamsipour Technical and Vocational College",
+      "logo": "assets/logos/Shamsipour-fa-logo.svg",
+      "years": "2013 – 2015",
+      "grade": "16.76 / 20",
+      "description": "ICT Engineering at Shamsipour Technical and Vocational College.",
+      "thesis": {
+        "url": "https://www.slideshare.net/MiladJahandideh/labviewlm35tcontrolmelecpdf",
+        "label": "Temperature monitoring and control in LabVIEW software [FA]"
+      },
+      "presentations": [
+        { "url": "https://www.slideshare.net/MiladJahandideh/cdn-content-delivery-networks", "label": "CDN – Content Delivery Networks [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/otdr-optical-time-domain-reflectometer-fa", "label": "OTDR – Optical Time Domain Reflectometer [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/snmp-iphost-network-monitoring", "label": "SNMP IPHost Network Monitoring [FA]" },
+        { "url": "https://www.slideshare.net/MiladJahandideh/gsmgprs-modules", "label": "GSM/GPRS Modules [FA]" }
+      ],
+      "sehat": "14042088748918245106"
+    },
+    {
+      "id": "as-tvu",
+      "degree": "AS – Electronic Engineering",
+      "school": "Technical and Vocational University",
+      "logo": "assets/logos/National_University_of_Skills.png",
+      "years": "2011 – 2013",
+      "grade": "18.06 / 20",
+      "description": "Electronic Engineering at Enghelāb-e Eslāmi Technical College.",
+      "presentations": [
+        { "url": "https://www.slideshare.net/MiladJahandideh/orcad-pspice-92-tutorial-fa", "label": "Orcad Pspice 9.2 Tutorial [FA]" }
+      ],
+      "projects": [
+        {
+          "url": "https://github.com/miladjahandideh/sd-memory-card-library-for-avr-microcontrollers",
+          "label": "SD Memory Card Library for AVR Microcontrollers",
+          "icon": "github"
+        }
+      ],
+      "sehat": "14042370219301862698"
+    },
+    {
+      "id": "diploma",
+      "degree": "Diploma – Electronics",
+      "school": "Vocational School",
+      "logo": "assets/logos/Vocational-School.png",
+      "years": "2009 – 2011"
+    }
+  ]
+}
+    </script>
+
+    <!-- Project details for the per-card modal. Keep in sync with projects in cv.json. -->
+    <script type="application/json" id="cv-projects-data">
+{
+  "items": [
+    {
+      "id": "melec",
+      "title": "Melec.ir",
+      "subtitle": "Founder & Webmaster",
+      "logo": "assets/logos/melec-logo.png",
+      "summary": "Electronics & Microcontroller education community",
+      "years": "Nov 2013 – Dec 2018",
+      "location": "Remote",
+      "description": "Founded Melec.ir to share Electronic Engineering and microcontroller programming content as a side project during university. Personally authored 500+ posts and grew a strong presence in the Persian embedded systems community.",
+      "stats": [
+        { "label": "Posts authored myself", "value": "500+", "icon": "pen" },
+        { "label": "Published posts (site)", "value": "1,075", "icon": "file-lines" },
+        { "label": "Comments", "value": "5,556", "icon": "comments" },
+        { "label": "Q&A entries", "value": "432", "icon": "circle-question" },
+        { "label": "Daily users", "value": "~2k", "icon": "users" },
+        { "label": "Android app installs", "value": "17k+", "icon": "download" }
+      ],
+      "links": [
+        { "url": "https://melec.ir/", "label": "Website", "icon": "link" },
+        { "url": "https://cafebazaar.ir/app/com.melec?l=en", "label": "Android app (Cafe Bazaar)", "icon": "store" },
+        { "url": "https://web.archive.org/web/20151007060813/http://shop.melec.ir/", "label": "Shop archive (OpenCart)", "icon": "cart-shopping" },
+        { "url": "https://melec.ir/melec-ir-10th-birthday/", "label": "10th anniversary post", "icon": "link" },
+        { "url": "https://web.archive.org/web/20220201085754/https://www.alexa.com/siteinfo/melec.ir", "label": "Alexa site info (archive)", "icon": "link" }
+      ],
+      "embedded_work": {
+        "intro": "Worked as an Embedded System Developer on:",
+        "items": [
+          "Ethernet Relay Controller with TCP/IP and HTTP protocol",
+          "Ethernet Monitoring with TCP/IP and HTTP protocol",
+          "Temperature Monitoring using LabVIEW",
+          "RGB LED Controller with an Android app for mass production",
+          "Numerous custom embedded systems for commercial clients"
+        ]
+      }
+    }
+  ]
+}
+    </script>
+
     <script>
         (function () {
-            var darkModeToggle = document.querySelector('.dark-mode-toggle');
-            var darkModeIcon = darkModeToggle.querySelector('i');
-            function syncAria() {
-                darkModeToggle.setAttribute(
-                    'aria-label',
-                    document.body.classList.contains('dark-mode') ? 'Switch to light mode' : 'Switch to dark mode'
+            var img = document.getElementById('avatar-img');
+            if (img) {
+                function showPhoto() {
+                    img.classList.add('is-loaded');
+                }
+                function showInitials() {
+                    img.classList.remove('is-loaded');
+                }
+                img.addEventListener('load', showPhoto);
+                img.addEventListener('error', showInitials);
+                if (img.complete) {
+                    if (img.naturalWidth > 0) showPhoto();
+                    else showInitials();
+                }
+            }
+
+            var SKILLS_PINNED_FIRST = [
+                'Linux',
+                'OpenStack',
+                'Ceph',
+                'Golang',
+                'Kubernetes',
+                'Amazon AWS',
+                'Ansible'
+            ];
+            var skillsTop = document.getElementById('skills-chips-top');
+            var skillsDataEl = document.getElementById('cv-skills-data');
+
+            function createSkillChip(label) {
+                var li = document.createElement('li');
+                li.className = 'chip';
+                li.textContent = label;
+                return li;
+            }
+
+            function normalizeSkillLabel(name) {
+                if (name === 'GitLab CI') return 'GitLab';
+                if (name === 'Windows') return 'Windows Server';
+                return name;
+            }
+
+            /** Dedupe tech_stack order, then move SKILLS_PINNED_FIRST entries to the front. */
+            function buildOrderedSkillList(data) {
+                var seen = Object.create(null);
+                var ordered = [];
+                (data.tech_stack || []).forEach(function (raw) {
+                    var n = normalizeSkillLabel(raw);
+                    if (seen[n]) return;
+                    seen[n] = true;
+                    ordered.push(n);
+                });
+                var pinnedSet = Object.create(null);
+                SKILLS_PINNED_FIRST.forEach(function (p) {
+                    pinnedSet[p] = true;
+                });
+                var head = [];
+                SKILLS_PINNED_FIRST.forEach(function (p) {
+                    if (seen[p]) head.push(p);
+                });
+                var tail = ordered.filter(function (s) {
+                    return !pinnedSet[s];
+                });
+                return head.concat(tail);
+            }
+
+            if (skillsTop && skillsDataEl) {
+                try {
+                    var skillPayload = JSON.parse(skillsDataEl.textContent);
+                    var skills = buildOrderedSkillList(skillPayload);
+                    skillsTop.replaceChildren();
+                    if (!skills.length) {
+                        var emptyLi = document.createElement('li');
+                        emptyLi.className = 'empty-hint';
+                        emptyLi.textContent = 'No skills listed.';
+                        skillsTop.appendChild(emptyLi);
+                    } else {
+                        var frag = document.createDocumentFragment();
+                        skills.forEach(function (name) {
+                            frag.appendChild(createSkillChip(name));
+                        });
+                        skillsTop.appendChild(frag);
+                    }
+                } catch (err) {
+                    skillsTop.replaceChildren();
+                    var errLi = document.createElement('li');
+                    errLi.className = 'empty-hint';
+                    errLi.textContent = 'Skills data could not be read.';
+                    skillsTop.appendChild(errLi);
+                }
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            var dataEl = document.getElementById('cv-footer-data');
+            var lineEl = document.getElementById('site-footer-tagline');
+            var footerEl = lineEl && lineEl.closest('footer');
+            if (!dataEl || !lineEl) return;
+            try {
+                var data = JSON.parse(dataEl.textContent);
+                var displayName = data.name || '';
+                var langs = (data.languages || []).map(function (l) {
+                    return l && l.name;
+                }).filter(Boolean);
+                var tagline = data.footer_tagline || '';
+                var speaks = langs.join(', ');
+                var text = displayName + ' | Speaks ' + speaks + ' | ' + tagline;
+                lineEl.textContent = text;
+                if (footerEl && langs.length) {
+                    var tipParts = (data.languages || []).map(function (l) {
+                        if (!l || !l.name) return '';
+                        return l.level ? l.name + ': ' + l.level : l.name;
+                    }).filter(Boolean);
+                    if (tipParts.length) footerEl.title = tipParts.join(' · ');
+                }
+            } catch (err) {
+                lineEl.textContent = '';
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            var dataEl = document.getElementById('cv-education-data');
+            var modal = document.getElementById('edu-modal');
+            var backdrop = document.getElementById('edu-modal-backdrop');
+            var closeBtn = document.getElementById('edu-modal-close');
+            var titleEl = document.getElementById('edu-modal-title');
+            var schoolEl = document.getElementById('edu-modal-school');
+            var logoEl = document.getElementById('edu-modal-logo');
+            var bodyEl = document.getElementById('edu-modal-desc');
+            if (!dataEl || !modal || !backdrop || !closeBtn || !titleEl || !schoolEl || !logoEl || !bodyEl) return;
+
+            var items = {};
+            try {
+                var parsed = JSON.parse(dataEl.textContent);
+                (parsed.items || []).forEach(function (it) {
+                    if (it && it.id) items[it.id] = it;
+                });
+            } catch (err) {
+                return;
+            }
+
+            var triggers = document.querySelectorAll('.edu-details-btn');
+            if (!triggers.length) return;
+
+            var lastTrigger = null;
+            var keydownHandler = null;
+
+            function escapeHtml(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function buildLogo(item) {
+                logoEl.replaceChildren();
+                if (item.logo) {
+                    var img = document.createElement('img');
+                    img.src = item.logo;
+                    img.alt = '';
+                    img.width = 44;
+                    img.height = 44;
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+                    logoEl.appendChild(img);
+                } else if (item.logoText) {
+                    logoEl.textContent = item.logoText;
+                }
+            }
+
+            function buildFacts(item) {
+                if (!item.years && !item.grade) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var list = document.createElement('div');
+                list.className = 'edu-facts';
+                if (item.years) {
+                    list.insertAdjacentHTML('beforeend',
+                        '<span class="edu-fact"><i class="fas fa-calendar" aria-hidden="true"></i>' + escapeHtml(item.years) + '</span>');
+                }
+                if (item.grade) {
+                    list.insertAdjacentHTML('beforeend',
+                        '<span class="edu-fact"><i class="fas fa-award" aria-hidden="true"></i>Grade ' + escapeHtml(item.grade) + '</span>');
+                }
+                section.appendChild(list);
+                return section;
+            }
+
+            function buildDescription(item) {
+                if (!item.description) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var p = document.createElement('p');
+                p.className = 'edu-description';
+                p.textContent = item.description;
+                section.appendChild(p);
+                return section;
+            }
+
+            function resolveLinkIcon(iconKey, url) {
+                if (iconKey === 'github') return 'fab fa-github';
+                if (iconKey === 'thesis') return 'fas fa-file-lines';
+                if (iconKey === 'video') return 'fas fa-circle-play';
+                if (iconKey === 'presentation') {
+                    if (url && /aparat\.com/i.test(url)) return 'fas fa-circle-play';
+                    return 'fas fa-file-powerpoint';
+                }
+                return 'fas fa-link';
+            }
+
+            function makeLinkItem(url, label, iconKey) {
+                var iconClass = resolveLinkIcon(iconKey, url);
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.className = 'edu-link';
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.innerHTML =
+                    '<i class="' + iconClass + ' edu-link-icon" aria-hidden="true"></i>' +
+                    '<span class="edu-link-label">' + escapeHtml(label) + '</span>' +
+                    '<i class="fas fa-arrow-up-right-from-square edu-link-arrow" aria-hidden="true"></i>';
+                li.appendChild(a);
+                return li;
+            }
+
+            function buildLinkSection(title, links, defaultIconKey) {
+                if (!links || !links.length) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var h = document.createElement('div');
+                h.className = 'edu-section-title';
+                h.textContent = title;
+                var ul = document.createElement('ul');
+                ul.className = 'edu-link-list';
+                links.forEach(function (l) {
+                    if (!l || !l.url) return;
+                    ul.appendChild(makeLinkItem(l.url, l.label || l.url, l.icon || defaultIconKey));
+                });
+                section.appendChild(h);
+                section.appendChild(ul);
+                return section;
+            }
+
+            function buildThesis(item) {
+                if (!item.thesis || !item.thesis.url) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var h = document.createElement('div');
+                h.className = 'edu-section-title';
+                h.textContent = 'Final Thesis';
+                var ul = document.createElement('ul');
+                ul.className = 'edu-link-list';
+                ul.appendChild(makeLinkItem(item.thesis.url, item.thesis.label || item.thesis.url, 'thesis'));
+                section.appendChild(h);
+                section.appendChild(ul);
+                return section;
+            }
+
+            function buildSehat(item) {
+                if (!item.sehat) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var h = document.createElement('div');
+                h.className = 'edu-section-title';
+                h.textContent = 'Verification Code';
+                var row = document.createElement('div');
+                row.className = 'edu-sehat';
+                var code = document.createElement('span');
+                code.className = 'edu-sehat-code';
+                code.textContent = item.sehat;
+                row.appendChild(code);
+
+                if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'edu-sehat-copy';
+                    btn.setAttribute('aria-label', 'Copy verification code');
+                    btn.innerHTML = '<i class="fas fa-copy" aria-hidden="true"></i><span>Copy</span>';
+                    btn.addEventListener('click', function () {
+                        navigator.clipboard.writeText(item.sehat).then(function () {
+                            btn.classList.add('is-copied');
+                            btn.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i><span>Copied</span>';
+                            setTimeout(function () {
+                                btn.classList.remove('is-copied');
+                                btn.innerHTML = '<i class="fas fa-copy" aria-hidden="true"></i><span>Copy</span>';
+                            }, 1800);
+                        }).catch(function () { /* ignore */ });
+                    });
+                    row.appendChild(btn);
+                }
+
+                section.appendChild(h);
+                section.appendChild(row);
+                return section;
+            }
+
+            function populate(item) {
+                titleEl.textContent = item.degree || '';
+                schoolEl.textContent = item.school || '';
+                buildLogo(item);
+
+                bodyEl.replaceChildren();
+                var sections = [
+                    buildFacts(item),
+                    buildDescription(item),
+                    buildThesis(item),
+                    buildLinkSection('Presentations', item.presentations, 'presentation'),
+                    buildLinkSection('Projects', item.projects),
+                    buildSehat(item)
+                ];
+                sections.forEach(function (s) {
+                    if (s) bodyEl.appendChild(s);
+                });
+            }
+
+            function getFocusable() {
+                return modal.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
                 );
             }
-            syncAria();
-            darkModeToggle.addEventListener('click', function () {
-                document.body.classList.toggle('dark-mode');
-                darkModeIcon.classList.toggle('fa-moon');
-                darkModeIcon.classList.toggle('fa-sun');
-                syncAria();
+
+            function trapFocus(e) {
+                if (e.key !== 'Tab') return;
+                var nodes = getFocusable();
+                if (!nodes.length) return;
+                var first = nodes[0];
+                var last = nodes[nodes.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+
+            function onKeydown(e) {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    e.preventDefault();
+                    closeModal();
+                } else {
+                    trapFocus(e);
+                }
+            }
+
+            function openModal(id, trigger) {
+                var item = items[id];
+                if (!item) return;
+                lastTrigger = trigger || null;
+                populate(item);
+
+                modal.hidden = false;
+                backdrop.hidden = false;
+                document.body.style.overflow = 'hidden';
+
+                requestAnimationFrame(function () {
+                    modal.classList.add('is-open');
+                    backdrop.classList.add('is-open');
+                });
+
+                keydownHandler = onKeydown;
+                document.addEventListener('keydown', keydownHandler);
+                bodyEl.scrollTop = 0;
+                setTimeout(function () { closeBtn.focus(); }, 0);
+            }
+
+            function closeModal() {
+                modal.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                document.body.style.overflow = '';
+
+                if (keydownHandler) {
+                    document.removeEventListener('keydown', keydownHandler);
+                    keydownHandler = null;
+                }
+
+                var finalize = function () {
+                    modal.hidden = true;
+                    backdrop.hidden = true;
+                    if (lastTrigger && typeof lastTrigger.focus === 'function') {
+                        lastTrigger.focus();
+                    }
+                    lastTrigger = null;
+                };
+
+                var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if (reduceMotion) {
+                    finalize();
+                } else {
+                    setTimeout(finalize, 200);
+                }
+            }
+
+            triggers.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var id = btn.getAttribute('data-edu-id');
+                    if (id) openModal(id, btn);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+        })();
+    </script>
+    <script>
+        (function () {
+            var dataEl = document.getElementById('cv-projects-data');
+            var modal = document.getElementById('project-modal');
+            var backdrop = document.getElementById('project-modal-backdrop');
+            var closeBtn = document.getElementById('project-modal-close');
+            var titleEl = document.getElementById('project-modal-title');
+            var subtitleEl = document.getElementById('project-modal-subtitle');
+            var logoEl = document.getElementById('project-modal-logo');
+            var bodyEl = document.getElementById('project-modal-desc');
+            if (!dataEl || !modal || !backdrop || !closeBtn || !titleEl || !subtitleEl || !logoEl || !bodyEl) return;
+
+            var items = {};
+            try {
+                var parsed = JSON.parse(dataEl.textContent);
+                (parsed.items || []).forEach(function (it) {
+                    if (it && it.id) items[it.id] = it;
+                });
+            } catch (err) {
+                return;
+            }
+
+            var triggers = document.querySelectorAll('.project-details-btn');
+            if (!triggers.length) return;
+
+            var lastTrigger = null;
+            var keydownHandler = null;
+
+            function escapeHtml(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function buildLogo(item) {
+                logoEl.replaceChildren();
+                if (item.logo) {
+                    var img = document.createElement('img');
+                    img.src = item.logo;
+                    img.alt = '';
+                    img.width = 44;
+                    img.height = 44;
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+                    logoEl.appendChild(img);
+                } else if (item.logoText) {
+                    logoEl.textContent = item.logoText;
+                }
+            }
+
+            function statIconClass(iconKey) {
+                var k = iconKey || '';
+                if (k === 'pen') return 'fas fa-pen';
+                if (k === 'file-lines') return 'fas fa-file-lines';
+                if (k === 'comments') return 'fas fa-comments';
+                if (k === 'circle-question') return 'fas fa-circle-question';
+                if (k === 'chart-line') return 'fas fa-chart-line';
+                if (k === 'users') return 'fas fa-users';
+                if (k === 'download') return 'fas fa-download';
+                return 'fas fa-chart-simple';
+            }
+
+            function linkIconClass(iconKey, url) {
+                var k = iconKey || '';
+                if (k === 'link') return 'fas fa-link';
+                if (k === 'store') return 'fas fa-store';
+                if (k === 'cart-shopping') return 'fas fa-cart-shopping';
+                if (k === 'cake-candles') return 'fas fa-cake-candles';
+                if (k === 'ranking-star') return 'fas fa-ranking-star';
+                if (k === 'github') return 'fab fa-github';
+                return 'fas fa-arrow-up-right-from-square';
+            }
+
+            function buildMetrics(item) {
+                var hasTop = item.years || item.location;
+                var hasStats = item.stats && item.stats.length;
+                if (!hasTop && !hasStats) return null;
+
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var list = document.createElement('div');
+                list.className = 'edu-facts';
+
+                if (item.years) {
+                    list.insertAdjacentHTML('beforeend',
+                        '<span class="edu-fact"><i class="fas fa-calendar" aria-hidden="true"></i>' + escapeHtml(item.years) + '</span>');
+                }
+                if (item.location) {
+                    list.insertAdjacentHTML('beforeend',
+                        '<span class="edu-fact"><i class="fas fa-location-dot" aria-hidden="true"></i>' + escapeHtml(item.location) + '</span>');
+                }
+                if (hasStats) {
+                    item.stats.forEach(function (s) {
+                        if (!s) return;
+                        var label = s.label || '';
+                        var value = s.value != null ? String(s.value) : '';
+                        var text = label ? (label + ': ' + value) : value;
+                        var ic = statIconClass(s.icon);
+                        list.insertAdjacentHTML('beforeend',
+                            '<span class="edu-fact"><i class="' + ic + '" aria-hidden="true"></i>' + escapeHtml(text) + '</span>');
+                    });
+                }
+
+                section.appendChild(list);
+                return section;
+            }
+
+            function buildDescription(item) {
+                if (!item.description) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var p = document.createElement('p');
+                p.className = 'edu-description';
+                p.textContent = item.description;
+                section.appendChild(p);
+                return section;
+            }
+
+            function makeLinkItem(url, label, iconKey) {
+                var iconClass = linkIconClass(iconKey, url);
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.className = 'edu-link';
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.innerHTML =
+                    '<i class="' + iconClass + ' edu-link-icon" aria-hidden="true"></i>' +
+                    '<span class="edu-link-label">' + escapeHtml(label || url) + '</span>' +
+                    '<i class="fas fa-arrow-up-right-from-square edu-link-arrow" aria-hidden="true"></i>';
+                li.appendChild(a);
+                return li;
+            }
+
+            function buildLinks(item) {
+                if (!item.links || !item.links.length) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var h = document.createElement('div');
+                h.className = 'edu-section-title';
+                h.textContent = 'Links';
+                var ul = document.createElement('ul');
+                ul.className = 'edu-link-list';
+                item.links.forEach(function (l) {
+                    if (!l || !l.url) return;
+                    ul.appendChild(makeLinkItem(l.url, l.label || l.url, l.icon));
+                });
+                section.appendChild(h);
+                section.appendChild(ul);
+                return section;
+            }
+
+            function buildEmbeddedWork(item) {
+                var ew = item.embedded_work;
+                if (!ew || !ew.items || !ew.items.length) return null;
+                var section = document.createElement('section');
+                section.className = 'edu-section';
+                var h = document.createElement('div');
+                h.className = 'edu-section-title';
+                h.textContent = 'Embedded systems work';
+                section.appendChild(h);
+                if (ew.intro) {
+                    var intro = document.createElement('p');
+                    intro.className = 'edu-description';
+                    intro.textContent = ew.intro;
+                    section.appendChild(intro);
+                }
+                var ul = document.createElement('ul');
+                ul.className = 'role-list';
+                ew.items.forEach(function (text) {
+                    if (!text) return;
+                    var li = document.createElement('li');
+                    li.textContent = text;
+                    ul.appendChild(li);
+                });
+                section.appendChild(ul);
+                return section;
+            }
+
+            function populate(item) {
+                titleEl.textContent = item.title || '';
+                var subParts = [];
+                if (item.subtitle) subParts.push(item.subtitle);
+                if (item.summary) subParts.push(item.summary);
+                subtitleEl.textContent = subParts.join(' · ');
+                buildLogo(item);
+
+                bodyEl.replaceChildren();
+                var sections = [
+                    buildMetrics(item),
+                    buildDescription(item),
+                    buildEmbeddedWork(item),
+                    buildLinks(item)
+                ];
+                sections.forEach(function (s) {
+                    if (s) bodyEl.appendChild(s);
+                });
+            }
+
+            function getFocusable() {
+                return modal.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                );
+            }
+
+            function trapFocus(e) {
+                if (e.key !== 'Tab') return;
+                var nodes = getFocusable();
+                if (!nodes.length) return;
+                var first = nodes[0];
+                var last = nodes[nodes.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+
+            function onKeydown(e) {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    e.preventDefault();
+                    closeModal();
+                } else {
+                    trapFocus(e);
+                }
+            }
+
+            function openModal(id, trigger) {
+                var item = items[id];
+                if (!item) return;
+                lastTrigger = trigger || null;
+                populate(item);
+
+                modal.hidden = false;
+                backdrop.hidden = false;
+                document.body.style.overflow = 'hidden';
+
+                requestAnimationFrame(function () {
+                    modal.classList.add('is-open');
+                    backdrop.classList.add('is-open');
+                });
+
+                keydownHandler = onKeydown;
+                document.addEventListener('keydown', keydownHandler);
+                bodyEl.scrollTop = 0;
+                setTimeout(function () { closeBtn.focus(); }, 0);
+            }
+
+            function closeModal() {
+                modal.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                document.body.style.overflow = '';
+
+                if (keydownHandler) {
+                    document.removeEventListener('keydown', keydownHandler);
+                    keydownHandler = null;
+                }
+
+                var finalize = function () {
+                    modal.hidden = true;
+                    backdrop.hidden = true;
+                    if (lastTrigger && typeof lastTrigger.focus === 'function') {
+                        lastTrigger.focus();
+                    }
+                    lastTrigger = null;
+                };
+
+                var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if (reduceMotion) {
+                    finalize();
+                } else {
+                    setTimeout(finalize, 200);
+                }
+            }
+
+            triggers.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var id = btn.getAttribute('data-project-id');
+                    if (id) openModal(id, btn);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+        })();
+    </script>
+    <script>
+        (function () {
+            var storageKey = 'cv-dark-mode';
+            var root = document.documentElement;
+            var btn = document.querySelector('.dark-mode-toggle');
+            if (!btn) return;
+
+            var icon = document.createElement('i');
+            icon.setAttribute('aria-hidden', 'true');
+            icon.className = root.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+            btn.appendChild(icon);
+
+            function label() {
+                return root.classList.contains('dark-mode') ? 'Switch to light mode' : 'Switch to dark mode';
+            }
+            btn.setAttribute('aria-label', label());
+            btn.setAttribute('title', label());
+
+            btn.addEventListener('click', function () {
+                root.classList.toggle('dark-mode');
+                var dark = root.classList.contains('dark-mode');
+                icon.classList.toggle('fa-moon', !dark);
+                icon.classList.toggle('fa-sun', dark);
+                btn.setAttribute('aria-label', label());
+                btn.setAttribute('title', label());
+                try {
+                    localStorage.setItem(storageKey, dark ? '1' : '0');
+                } catch (e) { /* ignore */ }
             });
         })();
     </script>
