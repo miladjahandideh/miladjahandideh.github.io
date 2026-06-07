@@ -9,9 +9,9 @@ Site Reliability Engineer | Tech Lead
 
 ## About Me
 
-I'm a Site Reliability Engineer (SRE) and Tech Lead with more than 7 years of experience in building, scaling, and maintaining high-availability cloud infrastructures. My expertise spans across Kubernetes, OpenStack, Ceph, and DevOps automation, with a deep focus on reliability, performance, and operational excellence.
+Site Reliability Engineer and Tech Lead with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure serving millions of users. At ArvanCloud, I lead SRE initiatives across a large-scale IaaS platform built on OpenStack, Ceph, and Kubernetes — owning reliability, observability, and infrastructure automation across distributed systems.
 
-At ArvanCloud, I lead SRE and systems engineering initiatives, driving improvements in system scalability, monitoring, and resilience across large distributed systems.
+I combine deep technical execution with engineering leadership: defining SLOs, driving incident culture, and guiding teams to build reliable systems at scale. My background spans private cloud infrastructure, container orchestration, network engineering, and full-cycle DevOps automation.
 
 ## Experience
 
@@ -19,31 +19,28 @@ At ArvanCloud, I lead SRE and systems engineering initiatives, driving improveme
 
 Nov 2020 - Present | Remote
 
-In ArvanCloud we are providing Infrastructure as a Service (IaaS) solutions with OpenStack, Ceph, and Kubernetes.
+ArvanCloud is a leading Iranian cloud provider delivering Infrastructure as a Service (IaaS) at scale, built on OpenStack, Ceph, and Kubernetes.
 
--   Participate in project planning, task estimation, and prioritization to maintain alignment with organizational goals
--   Collaborate with cross-functional teams to design and implement scalable, resilient infrastructure solutions
--   Improve system reliability by building robust monitoring and alerting stacks using Prometheus, Grafana, and custom alerting rules
--   Promote SRE best practices, driving a culture of reliability, automation, and continuous improvement
--   Design and maintain CI/CD pipelines using GitLab CI, improving deployment speed and consistency
--   Contribute to Infrastructure-as-Code initiatives using Ansible, enabling repeatable and automated deployments
--   Implement Load Balancer as a Service (LBaaS) using the OpenStack Octavia project
--   Deploy, operate, and optimize multiple Kubernetes clusters
--   Manage dozens of microservices on Kubernetes using Helm charts, ensuring efficient rollouts and lifecycle management
--   Led a VPC project connecting three OpenStack clusters using VXLAN overlays and BGP EVPN routing, leveraging OVN and Open vSwitch to deliver unified networking and secure inter-cluster communication.
+-   Lead the SRE chapter for ArvanCloud's IaaS platform, defining SLOs, owning incident response processes, and establishing reliability standards across core infrastructure services
+-   Architected and delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source [OVN/OVS CLI cheatsheet](https://gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1) on GitHub
+-   Designed and scaled the observability stack using Prometheus, Grafana, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems
+-   Deployed and operated multiple production Kubernetes clusters, managing dozens of microservices via Helm charts and GitOps workflows with ArgoCD
+-   Integrated Ceph RBD with OpenStack Cinder for persistent block storage and deployed Ceph CSI for Kubernetes persistent volume provisioning; published an open-source [Ceph CLI cheatsheet](https://github.com/miladjahandideh/ceph-cli-cheatsheet) on GitHub
+-   Implemented Load Balancer as a Service (LBaaS) using OpenStack Octavia, extending self-service networking capabilities for cloud tenants
+-   Built and maintained CI/CD pipelines with GitLab CI and standardized Infrastructure-as-Code practices with Ansible and Terraform, enabling consistent and automated deployments
+-   Participate in on-call rotations, lead incident response, and author post-mortems to drive systemic reliability improvements
+-   Maintain operational documentation including architecture diagrams, runbooks, and on-call playbooks to support team scaling and knowledge transfer
 
 ### Mahsan.co — Linux System Administrator
 
 Dec 2018 - Nov 2020 | On-site
 
--   Implemented VMware ESXi virtualization infrastructure to facilitate code development and testing for developers
--   Managed deployment and maintenance of applications on a large-scale Linux server environment
--   Automated repetitive tasks using Ansible and Shell Scripting
--   Containerized monolithic applications and optimized them to run on LXC
--   Implemented ELK Stack to collect and analyze logs from thousands of servers centrally
--   Utilized Zabbix for server monitoring
--   Implemented UI testing automation using Selenium
--   Provided Linux-related technical support and assistance to developers
+-   Administered and maintained a large-scale Linux server environment, supporting deployments across hundreds of servers for a defense-sector organization
+-   Deployed VMware ESXi virtualization infrastructure, enabling isolated development and testing environments for engineering teams
+-   Eliminated manual toil by automating infrastructure operations with Ansible and Shell Scripting
+-   Containerized and migrated monolithic applications to LXC, improving resource efficiency and deployment repeatability
+-   Built a centralized logging platform using the ELK Stack to aggregate and analyze logs from thousands of servers, enabling proactive issue detection
+-   Configured Zabbix monitoring with alerting, enabling proactive capacity tracking and server health visibility
 
 
 ### Melec.ir — Webmaster & Founder
@@ -126,7 +123,8 @@ Nov 2013 - Dec 2018 | Remote
 
 Dec 2017 - Nov 2018 | On-site
 
--   Worked on embedded systems for industrial applications.
+-   Developed firmware for industrial embedded systems using AVR and ARM microcontrollers
+-   Designed and built hardware-software integrated solutions for automation and control applications
 
 [Adeeco.org Archive page](https://web.archive.org/web/20181031044502/http://adeeco.org/)
 
@@ -194,4 +192,4 @@ Electronic Engineering @ Enghelāb-e Eslāmi Technical College
 
 _Order matches `cv.json` `tech_stack`._
 
-Linux, OpenStack, Ceph, Golang, Kubernetes, Amazon AWS, Ansible, Terraform, VMware ESXi, KVM, QEMU, Python, Docker, Helm, GitLab, ArgoCD, MariaDB, Grafana, Prometheus, OpenSearch, RabbitMQ, Jaeger, Redis, Bash, GitHub Actions, Zabbix, Windows Server, OVN, Open vSwitch, Cloud Solution Architecture, DevOps, Infrastructure as Code (IaC), Amazon S3, Amazon EC2, Networking, Git
+Linux, Kubernetes, OpenStack, Ceph, Docker, Helm, ArgoCD, Prometheus, Grafana, Jaeger, OpenSearch, Ansible, Terraform, GitLab CI, GitHub Actions, Git, Golang, Python, Bash, OVN, Open vSwitch, TCP/IP, CCNA, Amazon AWS, Amazon EC2, Amazon S3, RabbitMQ, Redis, MariaDB, Zabbix, VMware ESXi, KVM, QEMU
