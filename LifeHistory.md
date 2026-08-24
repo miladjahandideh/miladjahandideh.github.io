@@ -9,9 +9,9 @@ Site Reliability Engineer | Tech Lead
 
 ## About Me
 
-Site Reliability Engineer and Tech Lead with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure serving thousands of users. At ArvanCloud, I lead SRE initiatives across a large-scale IaaS platform built on OpenStack, Ceph, and Kubernetes — owning reliability, observability, and infrastructure automation across distributed systems.
+Tech Lead and Site Reliability Engineer with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure across OpenStack, Ceph, Kubernetes, and Linux-based platforms.
 
-I combine deep technical execution with engineering leadership: defining SLOs, driving incident culture, and guiding teams to build reliable systems at scale. My background spans private cloud infrastructure, container orchestration, network engineering, and full-cycle DevOps automation.
+My work focuses on building reliable infrastructure foundations, improving observability, automating operations, and helping engineering teams deliver production systems with clear standards, practical processes, and strong technical execution.
 
 ## Experience
 
@@ -21,12 +21,12 @@ Nov 2020 - Present | Remote
 
 ArvanCloud is a leading Iranian cloud provider delivering Infrastructure as a Service (IaaS) at scale, built on OpenStack, Ceph, and Kubernetes.
 
--   Lead the SRE chapter for ArvanCloud's IaaS platform, defining SLOs, owning incident response processes, and establishing reliability standards across core infrastructure services
--   Architected and delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source [OVN/OVS CLI cheatsheet](https://gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1) on GitHub
--   Designed and scaled the observability stack using Prometheus, Grafana, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems
+-   Delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source [OVN/OVS CLI cheatsheet](https://gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1) on GitHub
+-   Designed and scaled the observability stack using Prometheus, Grafana, Grafana Mimir for long-term metric storage, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems
 -   Deployed and operated multiple production Kubernetes clusters, managing dozens of microservices via Helm charts and GitOps workflows with ArgoCD
 -   Integrated Ceph RBD with OpenStack Cinder for persistent block storage and deployed Ceph CSI for Kubernetes persistent volume provisioning; published an open-source [Ceph CLI cheatsheet](https://github.com/miladjahandideh/ceph-cli-cheatsheet) on GitHub
--   Implemented Load Balancer as a Service (LBaaS) using OpenStack Octavia, extending self-service networking capabilities for cloud tenants
+-   Worked with five production OpenStack clusters, each running thousands of VMs, and published an open-source [OpenStack Client guide](https://github.com/miladjahandideh/openstack-cli-cheatsheet) on GitHub
+-   Tech-led and contributed to new service architectures for the Cloud Servers team, and was selected as Technical Architect to guide cloud server platform design and technical direction
 -   Built and maintained CI/CD pipelines with GitLab CI and standardized Infrastructure-as-Code practices with Ansible and Terraform, enabling consistent and automated deployments
 -   Participate in on-call rotations, lead incident response, and author post-mortems to drive systemic reliability improvements
 -   Maintain operational documentation including architecture diagrams, runbooks, and on-call playbooks to support team scaling and knowledge transfer

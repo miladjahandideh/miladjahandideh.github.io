@@ -991,8 +991,8 @@
             <section class="card content-section" id="about" aria-labelledby="about-heading">
                 <h2 class="card-title" id="about-heading">About</h2>
                 <div class="prose">
-                    <p>Site Reliability Engineer and Tech Lead with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure serving thousands of users. At ArvanCloud, I lead SRE initiatives across a large-scale IaaS platform built on OpenStack, Ceph, and Kubernetes — owning reliability, observability, and infrastructure automation across distributed systems.</p>
-                    <p>I combine deep technical execution with engineering leadership: defining SLOs, driving incident culture, and guiding teams to build reliable systems at scale. My background spans private cloud infrastructure, container orchestration, network engineering, and full-cycle DevOps automation.</p>
+                    <p>Tech Lead and Site Reliability Engineer with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure across OpenStack, Ceph, Kubernetes, and Linux-based platforms.</p>
+                    <p>My work focuses on building reliable infrastructure foundations, improving observability, automating operations, and helping engineering teams deliver production systems with clear standards, practical processes, and strong technical execution.</p>
                 </div>
             </section>
 
@@ -1013,12 +1013,12 @@
                         </div>
                         <p class="role-summary">ArvanCloud is a leading Iranian cloud provider delivering Infrastructure as a Service (IaaS) at scale, built on OpenStack, Ceph, and Kubernetes.</p>
                         <ul class="role-list">
-                            <li>Lead the SRE chapter for ArvanCloud's IaaS platform, defining SLOs, owning incident response processes, and establishing reliability standards across core infrastructure services.</li>
-                            <li>Architected and delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source <a href="https://gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1" target="_blank" rel="noopener noreferrer">OVN/OVS CLI cheatsheet</a> on GitHub.</li>
-                            <li>Designed and scaled the observability stack using Prometheus, Grafana, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems.</li>
+                            <li>Delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source <a href="https://gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1" target="_blank" rel="noopener noreferrer">OVN/OVS CLI cheatsheet</a> on GitHub.</li>
+                            <li>Designed and scaled the observability stack using Prometheus, Grafana, Grafana Mimir for long-term metric storage, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems.</li>
                             <li>Deployed and operated multiple production Kubernetes clusters, managing dozens of microservices via Helm charts and GitOps workflows with ArgoCD.</li>
                             <li>Integrated Ceph RBD with OpenStack Cinder for persistent block storage and deployed Ceph CSI for Kubernetes persistent volume provisioning; published an open-source <a href="https://github.com/miladjahandideh/ceph-cli-cheatsheet" target="_blank" rel="noopener noreferrer">Ceph CLI cheatsheet</a> on GitHub.</li>
-                            <li>Implemented Load Balancer as a Service (LBaaS) using OpenStack Octavia, extending self-service networking capabilities for cloud tenants.</li>
+                            <li>Worked with five production OpenStack clusters, each running thousands of VMs, and published an open-source <a href="https://github.com/miladjahandideh/openstack-cli-cheatsheet" target="_blank" rel="noopener noreferrer">OpenStack Client guide</a> on GitHub.</li>
+                            <li>Tech-led and contributed to new service architectures for the Cloud Servers team, and was selected as Technical Architect to guide cloud server platform design and technical direction.</li>
                             <li>Built and maintained CI/CD pipelines with GitLab CI and standardized Infrastructure-as-Code practices with Ansible and Terraform, enabling consistent and automated deployments.</li>
                             <li>Participate in on-call rotations, lead incident response, and author post-mortems to drive systemic reliability improvements.</li>
                             <li>Maintain operational documentation including architecture diagrams, runbooks, and on-call playbooks to support team scaling and knowledge transfer.</li>
@@ -1135,6 +1135,21 @@
 
             <section class="card content-section" id="projects" aria-labelledby="projects-heading">
                 <h2 class="card-title" id="projects-heading">Projects</h2>
+
+                <article class="project-card">
+                    <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/mykargo-icon.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">MyKargo.net</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Full Stack Developer · AI-agentic-first development workflow</div>
+                            <button type="button" class="project-details-btn" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="mykargo" aria-label="More details for MyKargo.net">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
                 <article class="project-card">
                     <div class="org-logo" aria-hidden="true">
@@ -1325,6 +1340,24 @@
     <script type="application/json" id="cv-projects-data">
 {
   "items": [
+    {
+      "id": "mykargo",
+      "title": "MyKargo.net",
+      "subtitle": "Full Stack Developer",
+      "logo": "assets/logos/mykargo-icon.svg",
+      "summary": "Logistics platform developed with an AI-agentic-first workflow",
+      "years": "Apr 2026 – Present",
+      "location": "Remote",
+      "description": "Started MyKargo.net as a side project in April 2026, building the logistics platform as a full stack developer with an AI-agentic-first development workflow.",
+      "stats": [
+        { "label": "Role", "value": "Full Stack Developer", "icon": "code" },
+        { "label": "Development workflow", "value": "AI Agentic First", "icon": "robot" }
+      ],
+      "links": [
+        { "url": "https://mykargo.net/en", "label": "Website", "icon": "link" },
+        { "url": "https://github.com/mykargo-net", "label": "GitHub organization", "icon": "github" }
+      ]
+    },
     {
       "id": "melec",
       "title": "Melec.ir",
@@ -1836,6 +1869,8 @@
                 if (k === 'chart-line') return 'fas fa-chart-line';
                 if (k === 'users') return 'fas fa-users';
                 if (k === 'download') return 'fas fa-download';
+                if (k === 'code') return 'fas fa-code';
+                if (k === 'robot') return 'fas fa-robot';
                 return 'fas fa-chart-simple';
             }
 
