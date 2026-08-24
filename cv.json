@@ -14,12 +14,12 @@
       "location": "Remote",
       "description": "ArvanCloud is a leading Iranian cloud provider delivering Infrastructure as a Service (IaaS) at scale, built on OpenStack, Ceph, and Kubernetes.",
       "responsibilities": [
-        "Lead the SRE chapter for ArvanCloud's IaaS platform, defining SLOs, owning incident response processes, and establishing reliability standards across core infrastructure services",
-        "Architected and delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source OVN/OVS CLI cheatsheet on GitHub (gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1)",
-        "Designed and scaled the observability stack using Prometheus, Grafana, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems",
+        "Delivered a VPC project connecting three OpenStack clusters via VXLAN overlays and BGP EVPN routing using OVN and Open vSwitch, enabling secure and unified inter-cluster networking at scale; published an open-source OVN/OVS CLI cheatsheet on GitHub (gist.github.com/miladjahandideh/fa2dab5aa64e41bb80625541119105e1)",
+        "Designed and scaled the observability stack using Prometheus, Grafana, Grafana Mimir for long-term metric storage, and custom alerting rules, significantly reducing MTTR and improving incident detection across distributed systems",
         "Deployed and operated multiple production Kubernetes clusters, managing dozens of microservices via Helm charts and GitOps workflows with ArgoCD",
         "Integrated Ceph RBD with OpenStack Cinder for persistent block storage and deployed Ceph CSI for Kubernetes persistent volume provisioning; published an open-source Ceph CLI cheatsheet on GitHub (github.com/miladjahandideh/ceph-cli-cheatsheet)",
-        "Implemented Load Balancer as a Service (LBaaS) using OpenStack Octavia, extending self-service networking capabilities for cloud tenants",
+        "Worked with five production OpenStack clusters, each running thousands of VMs, and published an open-source OpenStack Client guide on GitHub (github.com/miladjahandideh/openstack-cli-cheatsheet)",
+        "Tech-led and contributed to new service architectures for the Cloud Servers team, and was selected as Technical Architect to guide cloud server platform design and technical direction",
         "Built and maintained CI/CD pipelines with GitLab CI and standardized Infrastructure-as-Code practices with Ansible and Terraform, enabling consistent and automated deployments",
         "Participate in on-call rotations, lead incident response, and author post-mortems to drive systemic reliability improvements",
         "Maintain operational documentation including architecture diagrams, runbooks, and on-call playbooks to support team scaling and knowledge transfer"
