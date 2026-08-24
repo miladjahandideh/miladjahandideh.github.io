@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MyKargo">
+  <!-- Highway M from extra-assets/mykargo-logo.svg. Lane dashes and pins are dropped: at
+       16px they turn to mud, and the two-tone M alone still reads as the mark. -->
+  <rect width="64" height="64" rx="14" fill="#0A1628" />
+  <g transform="translate(6.588 4.471) scale(0.352941)" fill="none" stroke-width="28"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 26,126 V 31 l 46,46" stroke="#FFFFFF" />
+    <path d="m 72,77 46,-46 v 95" stroke="#FF6B00" />
+  </g>
+</svg>

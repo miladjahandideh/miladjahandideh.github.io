@@ -91,6 +91,24 @@
   "projects": {
     "items": [
       {
+        "id": "mykargo",
+        "title": "MyKargo.net",
+        "subtitle": "Full Stack Developer",
+        "logo": "assets/logos/mykargo-icon.svg",
+        "summary": "Logistics platform developed with an AI-agentic-first workflow",
+        "years": "Apr 2026 – Present",
+        "location": "Remote",
+        "description": "Started MyKargo.net as a side project in April 2026, building the logistics platform as a full stack developer with an AI-agentic-first development workflow.",
+        "stats": [
+          { "label": "Role", "value": "Full Stack Developer", "icon": "code" },
+          { "label": "Development workflow", "value": "AI Agentic First", "icon": "robot" }
+        ],
+        "links": [
+          { "url": "https://mykargo.net/en", "label": "Website", "icon": "link" },
+          { "url": "https://github.com/mykargo-net", "label": "GitHub organization", "icon": "github" }
+        ]
+      },
+      {
         "id": "melec",
         "title": "Melec.ir",
         "subtitle": "Founder & Webmaster",

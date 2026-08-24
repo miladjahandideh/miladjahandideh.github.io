@@ -1138,6 +1138,21 @@
 
                 <article class="project-card">
                     <div class="org-logo" aria-hidden="true">
+                        <img src="assets/logos/mykargo-icon.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    </div>
+                    <div class="edu-body">
+                        <div class="degree">MyKargo.net</div>
+                        <div class="edu-institution-row">
+                            <div class="institution">Full Stack Developer · AI-agentic-first development workflow</div>
+                            <button type="button" class="project-details-btn" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="mykargo" aria-label="More details for MyKargo.net">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="org-logo" aria-hidden="true">
                         <img src="assets/logos/melec-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     </div>
                     <div class="edu-body">
@@ -1325,6 +1340,24 @@
     <script type="application/json" id="cv-projects-data">
 {
   "items": [
+    {
+      "id": "mykargo",
+      "title": "MyKargo.net",
+      "subtitle": "Full Stack Developer",
+      "logo": "assets/logos/mykargo-icon.svg",
+      "summary": "Logistics platform developed with an AI-agentic-first workflow",
+      "years": "Apr 2026 – Present",
+      "location": "Remote",
+      "description": "Started MyKargo.net as a side project in April 2026, building the logistics platform as a full stack developer with an AI-agentic-first development workflow.",
+      "stats": [
+        { "label": "Role", "value": "Full Stack Developer", "icon": "code" },
+        { "label": "Development workflow", "value": "AI Agentic First", "icon": "robot" }
+      ],
+      "links": [
+        { "url": "https://mykargo.net/en", "label": "Website", "icon": "link" },
+        { "url": "https://github.com/mykargo-net", "label": "GitHub organization", "icon": "github" }
+      ]
+    },
     {
       "id": "melec",
       "title": "Melec.ir",
@@ -1836,6 +1869,8 @@
                 if (k === 'chart-line') return 'fas fa-chart-line';
                 if (k === 'users') return 'fas fa-users';
                 if (k === 'download') return 'fas fa-download';
+                if (k === 'code') return 'fas fa-code';
+                if (k === 'robot') return 'fas fa-robot';
                 return 'fas fa-chart-simple';
             }
 
