@@ -9,9 +9,9 @@ Site Reliability Engineer | Tech Lead
 
 ## About Me
 
-Site Reliability Engineer and Tech Lead with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure serving thousands of users. At ArvanCloud, I lead SRE initiatives across a large-scale IaaS platform built on OpenStack, Ceph, and Kubernetes — owning reliability, observability, and infrastructure automation across distributed systems.
+Tech Lead and Site Reliability Engineer with 7+ years of experience designing, operating, and scaling high-availability cloud infrastructure across OpenStack, Ceph, Kubernetes, and Linux-based platforms.
 
-I combine deep technical execution with engineering leadership: defining SLOs, driving incident culture, and guiding teams to build reliable systems at scale. My background spans private cloud infrastructure, container orchestration, network engineering, and full-cycle DevOps automation.
+My work focuses on building reliable infrastructure foundations, improving observability, automating operations, and helping engineering teams deliver production systems with clear standards, practical processes, and strong technical execution.
 
 ## Experience
 
